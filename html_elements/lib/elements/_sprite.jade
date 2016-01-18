@@ -1,0 +1,18 @@
+mixin sprite
+
+  //-
+    - Usage: +sprite(src="filename@2x.png" alt="")
+    - Yield: span.sprite.sprite--filename-at2x #{alt}
+
+  -
+    var src = attributes.src.replace(/.png$/, '').replace(/@/, '-at')
+    attributes.src = null
+
+    var alt = attributes.alt
+    attributes.alt = null
+
+  if src.length
+    span&attributes(attributes).sprite(
+      class="sprite--" + src
+      )
+      | #{alt}

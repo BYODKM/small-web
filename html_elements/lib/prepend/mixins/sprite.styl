@@ -1,0 +1,5 @@
+// Usage: sprite("that.png")
+sprite(fileName)
+  fileName = replace('.png$', '', fileName)
+  fileName = replace('@', '-at', fileName)
+  $sprite--{fileName}()

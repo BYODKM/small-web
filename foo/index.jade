@@ -1,0 +1,22 @@
+include /html_elements/lib/main
+
+-
+  var breadcrumbs = {
+    items: [
+      {
+        text: 'Home',
+        href: '/'
+      },{
+        text: 'foo',
+        href: false
+      }
+    ]
+  }
+
++html
+  +head
+    +title
+  +body
+    .page
+      .page__gutter
+        +include("breadcrumbs")

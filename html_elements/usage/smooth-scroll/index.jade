@@ -1,0 +1,19 @@
+include /html_elements/lib/main
+
+-
+  var title = 'smooth-scroll | Usage'
+
++html
+  +head
+    +title
+  +body
+    .page
+      .page__gutter
+        ul
+          li#to-top
+            a(href="#to-bottom") To bottom
+          - var i = 1
+          while i <= 50
+            li= i++
+          li#to-bottom
+            a(href="#to-top") To top

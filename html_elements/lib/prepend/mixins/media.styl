@@ -1,0 +1,9 @@
+// Usage1: +media(tablet)
+// Usage2: +media(tablet, false)
+media(args...)
+  if args[1] == false
+    @media only screen and (min-width: args[0] + 1px)
+      {block}
+  else
+    @media only screen and (max-width: args[0])
+      {block}

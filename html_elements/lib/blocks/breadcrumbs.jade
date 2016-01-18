@@ -1,0 +1,28 @@
+-
+  var $ = 'breadcrumbs'
+  var the
+  var Breadcrumbs = {
+    items: [
+      {
+        text: 'Home',
+        href: '/'
+      },{
+        text: 'foo',
+        href: '/foo/'
+      },{
+        text: 'bar',
+        href: false
+      }
+    ]
+  }
+  breadcrumbs ? the = breadcrumbs : the = Breadcrumbs
+
+if the.items.length
+  div(class="#{$}")
+    ul(class="#{$}__items div")
+      each item, index in the.items
+        li(class="#{$}__item div")
+          if item.href
+            a(href=item.href class="#{(index===0) ? $+'__home a' : ''}")=item.text
+          else
+            | #{item.text}

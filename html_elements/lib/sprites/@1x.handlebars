@@ -1,0 +1,21 @@
+/* @1x */
+{{#each sprites}}
+
+$sprite--{{name}}()
+  $X = 1
+  display block
+  box-sizing border-box
+  width {{px.width}} * (1 / $X)
+  height {{px.height}} * (1 / $X)
+  background-image url("{{{escaped_image}}}")
+  background-position {{px.offset_x}} * (1 / $X) {{px.offset_y}} * (1 / $X)
+  background-size {{px.total_width}} * (1 / $X) {{px.total_height}} * (1 / $X)
+
+.sprite--{{name}}
+  $X = 1
+  padding-top {{px.height}} * (1 / $X)
+  width {{px.width}} * (1 / $X)
+  background-image url("{{{escaped_image}}}")
+  background-position {{px.offset_x}} * (1 / $X) {{px.offset_y}} * (1 / $X)
+  background-size {{px.total_width}} * (1 / $X) {{px.total_height}} * (1 / $X)
+{{/each}}

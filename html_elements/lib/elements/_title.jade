@@ -1,0 +1,24 @@
+mixin title
+
+  -
+    var Title = ''
+    var siteName  = 'small-web'
+    var separator = ' | '
+
+    if (breadcrumbs && breadcrumbs.items) {
+      var arr = []
+      var len = breadcrumbs.items.length
+      var index = 0
+      for (; index < len; index++)
+        arr.unshift(breadcrumbs.items[index].text)
+      arr.pop()
+      Title = arr.join(separator)
+    }
+
+    if (title)
+      Title = title
+
+  if Title.length
+    title=Title+separator+siteName
+  else
+    title=siteName

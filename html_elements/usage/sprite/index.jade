@@ -1,0 +1,19 @@
+include /html_elements/lib/main
+
+-
+  var title = '+sprite | Usage'
+
++html
+  +head
+    +title
+  +body
+    .page
+      .page__gutter
+        p
+          +sprite(src="dummy-44@1x.png" alt="")
+        p
+          code.code +sprite(src="dummy-44@1x.png" alt="")
+        p
+          +sprite(src="dummy-88@2x.png" alt="")
+        p
+          code.code +sprite(src="dummy-88@2x.png" alt="")

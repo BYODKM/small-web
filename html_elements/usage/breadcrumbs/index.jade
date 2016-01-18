@@ -1,0 +1,27 @@
+include /html_elements/lib/main
+
+-
+  var title = '.breadcrumbs | Usage'
+
+  var breadcrumbs = {
+    items: [
+      {
+        text: 'Home',
+        href: '/'
+      },{
+        text: 'foo',
+        href: '/foo/'
+      },{
+        text: 'baz',
+        href: false
+      }
+    ]
+  }
+
++html
+  +head
+    +title
+  +body
+    .page
+      .page__gutter
+        +include("breadcrumbs")

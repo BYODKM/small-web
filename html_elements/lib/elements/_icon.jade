@@ -1,0 +1,18 @@
+mixin icon
+
+  //-
+    - Usage: +icon(name="foo-bar-baz")
+    - Yield: span.foo.foo-bar-baz
+
+  -
+    var name = attributes.name || ''
+    var prefix = ''
+    if (name.length) {
+      prefix = name.split('-')[0]
+    }
+    attributes.name = null
+
+  if name.length
+    span&attributes(attributes)(
+      class="#{prefix} #{name}"
+      )

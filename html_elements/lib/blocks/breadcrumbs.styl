@@ -1,0 +1,39 @@
+.breadcrumbs
+  $lineH = 2
+
+  :root &
+    margin 0
+
+  & &__items
+    clear fix
+
+  & &__item
+    position relative
+    float left
+    color gray
+    line-height $lineH
+
+    &:before
+      content "/"
+      padding 0 0.6em
+      color silver
+
+    &:first-child
+      size 1em
+
+      &:before
+        display none
+
+  & &__home
+    $increaseH = 0.1
+    absolute 0 null null 0
+    width 1em
+    overflow hidden
+    font-family icon-font
+    font-size 1em + $increaseH
+    line-height $lineH - ($increaseH * 2)
+    white-space nowrap
+
+    &:before
+      content "\f38f"
+      padding-right 1em

@@ -1,0 +1,59 @@
+{
+  "name": "small-web",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Small Code for the Larger Site",
+  "scripts": {
+    "start": "gulp",
+    "sprite": "gulp sprite && gulp stylus",
+    "build": "gulp build",
+    "watch": "gulp watch",
+    "serve": "gulp serve"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/internets-inc/small-web.git"
+  },
+  "author": "Tomohiro Kasuga <tk@internets.co.jp>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/internets-inc/small-web/issues"
+  },
+  "homepage": "https://github.com/internets-inc/small-web",
+  "devDependencies": {
+    "browser-sync": "~2.11.0",
+    "browserify": "~13.0.0",
+    "debowerify": "~1.3.1",
+    "del": "~2.2.0",
+    "gulp": "~3.9.0",
+    "gulp-bower": "~0.0.11",
+    "gulp-coffee": "~2.3.1",
+    "gulp-cssmin": "~0.1.7",
+    "gulp-data": "~1.2.1",
+    "gulp-debug": "~2.1.2",
+    "gulp-imagemin": "~2.4.0",
+    "gulp-jade": "~1.1.0",
+    "gulp-jshint": "~2.0.0",
+    "gulp-notify": "~2.2.0",
+    "gulp-plumber": "~1.0.1",
+    "gulp-rename": "~1.2.2",
+    "gulp-stylus": "~2.2.0",
+    "gulp-uglify": "~1.5.1",
+    "gulp-util": "~3.0.7",
+    "gulp-watch": "~4.3.5",
+    "gulp.spritesmith": "~5.0.1",
+    "jade": "~1.11.0",
+    "jshint": "~2.8.0",
+    "jshint-stylish": "~2.1.0",
+    "jstransformer-coffee-script": "~1.0.0",
+    "jstransformer-stylus": "~1.0.0",
+    "kouto-swiss": "~0.11.14",
+    "merge-stream": "~1.0.0",
+    "normalize.css": "~3.0.3",
+    "run-sequence": "~1.1.5",
+    "vinyl-buffer": "~1.0.0",
+    "vinyl-source-stream": "~1.1.0",
+    "vue": "~1.0.13",
+    "watchify": "~3.7.0"
+  }
+}

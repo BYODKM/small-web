@@ -1,0 +1,11 @@
+mixin html
+
+  -
+    var defaultLang = 'ja'
+
+    if (!attributes.lang || attributes.lang === '')
+      attributes.lang = defaultLang
+
+  doctype html
+  html&attributes(attributes)
+    block

@@ -1,0 +1,9 @@
+mixin include(str)
+  
+  case str
+
+    when 'breadcrumbs'
+      include /html_elements/lib/blocks/breadcrumbs
+
+    default
+      return false

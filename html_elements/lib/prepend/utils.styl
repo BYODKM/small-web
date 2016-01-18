@@ -1,0 +1,25 @@
+:root
+
+  .u-margin
+
+    for str in "0" "0px" "10px"
+
+      &--t-{str}
+        margin-top unquote(str)
+
+        &.is-important
+          margin-top unquote(str)
+
+      &--b-{str}
+        margin-bottom unquote(str)
+
+        &.is-important
+          margin-bottom unquote(str)
+
+      &--tb-{str}
+        margin-top unquote(str)
+        margin-bottom unquote(str)
+
+        &.is-important
+          margin-top unquote(str)
+          margin-bottom unquote(str)
