@@ -12,13 +12,13 @@ This is yet another front-end bootstrap.
 - Compile to HTML with [Jade](https://github.com/pugjs/jade)
 - Compile to CSS with [Stylus](https://github.com/learnboost/stylus) & [kouto-swiss](https://github.com/leny/kouto-swiss)
 - Compile to JS with [CoffeeScript](https://github.com/jashkenas/coffeescript) as optional
-- Bundle JS files by [Browserify](https://github.com/substack/node-browserify)
-- [Vue.js](https://github.com/vuejs/vue) loaded
 - Built in Image Sprites generator
 - Built in web server & LiveReload
+- Bundle JS files by [Browserify](https://github.com/substack/node-browserify)
+- [Vue.js](https://github.com/vuejs/vue) loaded
 - Auto Vendor Prefixing
 - Ready for [GitHub Pages](https://pages.github.com)
-- And so much more...
+- And more...
 
 ## Usage
 
@@ -52,7 +52,15 @@ $ npm run sprite
 - iOS 7+
 - Others (last 2 versions)
 
-
 ## License
 
 MIT
+
+## Acknowledgements
+
+This application makes use of the following third party libraries:
+
+- [ionicons](https://github.com/driftyco/ionicons)
+- [morph.css](https://github.com/internets-inc/morph.css)
+- [normalize.css](https://github.com/necolas/normalize.css)
+- [vue](https://github.com/yyx990803/vue)

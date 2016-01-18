@@ -40,4 +40,4 @@ $ mkdir foo@2x
 $ cp @2x.handlebars foo@2x.handlebars
 ```
 
-TODO: Write the new folder names on `./index.styl`.
+__TODO:__ Write the new folder names on `./index.styl`.

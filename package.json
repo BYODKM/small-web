@@ -49,11 +49,13 @@
     "jstransformer-stylus": "~1.0.0",
     "kouto-swiss": "~0.11.14",
     "merge-stream": "~1.0.0",
-    "normalize.css": "~3.0.3",
     "run-sequence": "~1.1.5",
     "vinyl-buffer": "~1.0.0",
     "vinyl-source-stream": "~1.1.0",
-    "vue": "~1.0.13",
     "watchify": "~3.7.0"
+  },
+  "dependencies": {
+    "normalize.css": "~3.0.3",
+    "vue": "~1.0.15"
   }
 }

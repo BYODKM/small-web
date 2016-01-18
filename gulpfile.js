@@ -91,7 +91,7 @@ const config = {
     startPath: '/html_elements/usage/'
   },
   reload: {
-    stream:true
+    stream: true
   }
 };
 

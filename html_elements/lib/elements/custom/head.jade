@@ -3,6 +3,6 @@ mixin head
   head&attributes(attributes)
     meta(charset="utf-8")
     meta(name="viewport" content="width=device-width, initial-scale=1")
-    link(rel="stylesheet" href=__root + "html_elements/bundle.css")
+    link(href=__root + "html_elements/bundle.css" rel="stylesheet" media="only all")
     script(src=__root + "html_elements/bundle.js" charset="utf-8")
     block
