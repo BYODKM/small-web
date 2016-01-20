@@ -4,16 +4,13 @@ mixin title
     var Title = ''
     var siteName  = 'small-web'
     var separator = ' | '
+    var arr = []
 
-    if (breadcrumbs && breadcrumbs.items) {
-      var arr = []
-      var len = breadcrumbs.items.length
-      var index = 0
-      for (; index < len; index++)
-        arr.unshift(breadcrumbs.items[index].text)
+    if (breadcrumbs && breadcrumbs.items)
+      for (var i=0; i < breadcrumbs.items.length; i++)
+        arr.unshift(breadcrumbs.items[i].text)
       arr.pop()
       Title = arr.join(separator)
-    }
 
     if (title)
       Title = title

@@ -3,27 +3,32 @@ include /html_elements/lib/main
 -
   var title = 'Usage'
 
-  var demos = [
-    'breadcrumbs',
-    'button',
-    'icon',
-    'smooth-scroll',
-    'sprite'
-  ]
+  var boxUsageIndex = {
+    groups: [
+      {
+        label: 'blocks',
+        items: [
+          'breadcrumbs'
+        ]
+      },{
+        label: 'elements',
+        items: [
+          'button',
+          'icon',
+          'sprite'
+        ]
+      },{
+        label: 'scripts',
+        items: [
+          'smooth-scroll'
+        ]
+      }
+    ]
+  }
 
 +html
   +head
     +title
   +body
     .page
-      .page__gutter
-        h1=title
-        ul
-          each demo in demos
-            li
-              dl
-                dt.span
-                  a(href="./#{demo}/" target="_blank")=demo
-                dd.span
-                  code.code
-                    a(href="./#{demo}/index.jade" target="_blank") code
+      +include("box-usage-index")

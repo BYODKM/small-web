@@ -1,0 +1,40 @@
+-
+  var $ = 'box-usage-index'
+  var the
+  var BoxUsageIndex = {
+    groups: [
+      {
+        label: 'blocks',
+        items: [
+          'breadcrumbs'
+        ]
+      },{
+        label: 'elements',
+        items: [
+          'button',
+          'icon',
+          'sprite'
+        ]
+      },{
+        label: 'scripts',
+        items: [
+          'smooth-scroll'
+        ]
+      }
+    ]
+  }
+  boxUsageIndex ? the = boxUsageIndex : the = BoxUsageIndex
+
+div(class="#{$}")
+  h1(class="#{$}__title div")
+    | Usage
+  each group in the.groups
+    dl(class="#{$}__group div")
+      dt(class="#{$}__label div")=group.label
+      each item in group.items
+        dd(class="#{$}__item div")
+          p(class="#{$}__demo div")
+            a(href="./#{item}/" class="#{$}__link a")=item
+          p(class="#{$}__code div")
+            a(href="./#{item}/index.jade" target="_blank" class="a")
+              code.code Code
