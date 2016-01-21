@@ -1,8 +1,10 @@
 .box-usage-index
 
+  :root &
+    border-bottom 1px solid silver
+
   & &__title
     padding 0.2em 1rem
-    border-bottom 1px solid silver
     font-size xx-large
     font-weight bold
     background-color whitesmoke
@@ -17,7 +19,10 @@
 
   & &__item
     position relative
-    border-bottom 1px solid silver
+    border-top 1px solid silver
+
+    &:first-of-type
+      border-top 0
 
   & &__link
     display block

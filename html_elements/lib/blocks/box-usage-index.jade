@@ -27,6 +27,9 @@
 
 div(class="#{$}")
   h1(class="#{$}__title div")
+    a(href="https://github.com/internets-inc/small-web" target="_blank")
+      +icon(name="ion-social-github")
+    | &nbsp;
     | Usage
   each group in the.groups
     dl(class="#{$}__group div")
