@@ -9,14 +9,14 @@ This is yet another front-end bootstrap.
 ## Stacks
 
 - [Node.js](https://nodejs.org/) is required
-- Compile to HTML with [Jade](https://github.com/pugjs/jade)
-- Compile to CSS with [Stylus](https://github.com/learnboost/stylus) & [kouto-swiss](https://github.com/leny/kouto-swiss)
-- Compile to JS with [CoffeeScript](https://github.com/jashkenas/coffeescript) as optional
+- Compile to HTML by [Jade](https://github.com/pugjs/jade)
+- Compile to CSS by [Stylus](https://github.com/learnboost/stylus)
+- Compile to JS by [CoffeeScript](https://github.com/jashkenas/coffeescript) (optional)
 - Built in Image Sprites generator
 - Built in web server & LiveReload
 - Bundle JS files by [Browserify](https://github.com/substack/node-browserify)
 - [Vue.js](https://github.com/vuejs/vue) loaded
-- Auto Vendor Prefixing
+- Auto Vendor Prefixing by [kouto-swiss](https://github.com/leny/kouto-swiss)
 - Ready for [GitHub Pages](https://pages.github.com)
 - And more...
 
