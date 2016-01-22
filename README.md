@@ -1,3 +1,5 @@
+<img src="./html_elements/single-icon-smallweb@2x.png" alt="" style="width: 256px; display: block; margin: 0 auto;">
+
 # small-web
 
 > Small Code for the Larger Site
