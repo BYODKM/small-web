@@ -60,6 +60,8 @@ const config = {
     bare: true
   },
   browserify: {
+    cache: {},
+    packageCache: {},
     entries: ['./html_elements/lib/scripts/index.js'],
     transform: ['debowerify']
   },
@@ -232,6 +234,8 @@ gulp.task('watch-coffee', () => {
 
 const bundler = () => browserify(config.browserify);
 const watcher = watchify(bundler());
+watcher.on('log', g.util.log);
+
 const bundle = (pkg) => {
   return pkg.bundle()
     .on('error', g.util.log.bind(g.util, 'Browserify Error'))
@@ -241,22 +245,20 @@ const bundle = (pkg) => {
     .pipe(gulp.dest('./html_elements/'));
 };
 
-gulp.task('browserify', bundle.bind(null, bundler()));
-
 gulp.task('build', ['stylus', 'jade', 'coffee'], () => {
-    gulp.start('browserify');
+  bundle.bind(null, bundler());
 });
 
 gulp.task('watch', ['watch-stylus', 'watch-jade', 'watch-coffee'], () => {
-  watcher.on('log', g.util.log);
+  bundle(watcher);
   watcher.on('update', bundle.bind(null, watcher));
   browserSync.init(config.browserSync);
 });
 
 gulp.task('serve', ['build'], () => {
-    gulp.start('watch');
+  gulp.start('watch');
 });
 
 gulp.task('default', ['bower'], () => {
-    gulp.start('serve');
+  gulp.start('serve');
 });
