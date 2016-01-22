@@ -4,7 +4,7 @@
 
 ## TL;DR
 
-This is yet another front-end bootstrap.
+This is yet another static site generator.
 
 ## Stacks
 
