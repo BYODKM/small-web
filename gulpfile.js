@@ -14,7 +14,7 @@ const vinylBuffer = require('vinyl-buffer');
 const vinylStream = require('vinyl-source-stream');
 const watchify = require('watchify');
 
-const g = {
+const $ = {
   bower: require('gulp-bower'),
   coffee: require('gulp-coffee'),
   cssmin: require('gulp-cssmin'),
@@ -34,7 +34,7 @@ const g = {
 
 const config = {
   plumber: {
-    errorHandler: g.notify.onError('Error: <%= error.message %>')
+    errorHandler: $.notify.onError('Error: <%= error.message %>')
   },
   stylus: {
     'include css': true,
@@ -102,20 +102,20 @@ gulp.task('clean-bower', (done) => {
 });
 
 gulp.task('bower', ['clean-bower'], () => {
-  return g.bower();
+  return $.bower();
 });
 
 gulp.task('stylus', () => {
   return gulp.src('./html_elements/lib/main.styl')
-    .pipe(g.plumber(config.plumber))
-    .pipe(g.stylus(config.stylus))
-    .pipe(g.cssmin(config.cssmin))
-    .pipe(g.rename('bundle.css'))
+    .pipe($.plumber(config.plumber))
+    .pipe($.stylus(config.stylus))
+    .pipe($.cssmin(config.cssmin))
+    .pipe($.rename('bundle.css'))
     .pipe(gulp.dest('./html_elements/'));
 });
 
 gulp.task('watch-stylus', () => {
-  g.watch(['./html_elements/lib/**/*.styl'], () => {
+  $.watch(['./html_elements/lib/**/*.styl'], () => {
     gulp.start('stylus');
   });
 });
@@ -143,7 +143,7 @@ gulp.task('sprite', ['clean-sprite'], (done) => {
   })(src);
   const generateSprite = (folder) => {
     const spriteData = gulp.src(src + folder + '/*.png')
-      .pipe(g.spritesmith({
+      .pipe($.spritesmith({
         imgName: 'bundle-' + stamp + folder + '.png',
         cssName: folder + '.styl',
         cssTemplate: src + folder + '.handlebars',
@@ -154,7 +154,7 @@ gulp.task('sprite', ['clean-sprite'], (done) => {
     const cssStream = spriteData.css
       .pipe(gulp.dest(src));
     const imgStream = spriteData.img
-      .pipe(g.imagemin())
+      .pipe($.imagemin())
       .pipe(gulp.dest('./html_elements/'));
     return;
   };
@@ -171,25 +171,25 @@ gulp.task('jade', () => {
       '!./html_elements/lib/**/*.jade',
       '!./{bower_components,node_modules}/**/*.jade'
     ], {base: './'})
-    .pipe(g.plumber(config.plumber))
-    .pipe(g.data(config.data))
-    .pipe(g.jade(config.jade))
+    .pipe($.plumber(config.plumber))
+    .pipe($.data(config.data))
+    .pipe($.jade(config.jade))
     .pipe(gulp.dest('.'));
 });
 
 gulp.task('watch-jade', () => {
-  g.watch([
+  $.watch([
       './**/*.jade',
       '!./**/_*.jade',
       '!./html_elements/lib/**/*.jade',
       '!./{bower_components,node_modules}/**/*.jade'
     ], {base: './'})
-    .pipe(g.plumber(config.plumber))
-    .pipe(g.data(config.data))
-    .pipe(g.jade(config.jade))
+    .pipe($.plumber(config.plumber))
+    .pipe($.data(config.data))
+    .pipe($.jade(config.jade))
     .pipe(gulp.dest('.'))
     .pipe(browserSync.reload(config.reload));
-  g.watch([
+  $.watch([
       './html_elements/lib/**/*.jade',
       './**/_*.jade',
       '!./{bower_components,node_modules}/**/_*.jade'
@@ -200,9 +200,9 @@ gulp.task('watch-jade', () => {
           '!./html_elements/lib/**/*.jade',
           '!./{bower_components,node_modules}/**/*.jade'
         ], {base: './'})
-        .pipe(g.plumber(config.plumber))
-        .pipe(g.data(config.data))
-        .pipe(g.jade(config.jade))
+        .pipe($.plumber(config.plumber))
+        .pipe($.data(config.data))
+        .pipe($.jade(config.jade))
         .pipe(gulp.dest('.'))
         .on('end', browserSync.reload);
     });
@@ -213,35 +213,35 @@ gulp.task('coffee', () => {
       './**/*.coffee',
       '!./{bower_components,node_modules}/**/*.coffee'
     ], {base: './'})
-    .pipe(g.plumber(config.plumber))
-    .pipe(g.coffee(config.coffee))
-    .pipe(g.jshint())
-    .pipe(g.jshint.reporter('jshint-stylish'))
+    .pipe($.plumber(config.plumber))
+    .pipe($.coffee(config.coffee))
+    .pipe($.jshint())
+    .pipe($.jshint.reporter('jshint-stylish'))
     .pipe(gulp.dest('.'));
 });
 
 gulp.task('watch-coffee', () => {
-  g.watch([
+  $.watch([
       './**/*.coffee',
       '!./{bower_components,node_modules}/**/*.coffee'
     ], {base: './'})
-    .pipe(g.plumber(config.plumber))
-    .pipe(g.coffee(config.coffee))
-    .pipe(g.jshint())
-    .pipe(g.jshint.reporter('jshint-stylish'))
+    .pipe($.plumber(config.plumber))
+    .pipe($.coffee(config.coffee))
+    .pipe($.jshint())
+    .pipe($.jshint.reporter('jshint-stylish'))
     .pipe(gulp.dest('.'));
 });
 
 const bundler = () => browserify(config.browserify);
 const watcher = watchify(bundler());
-watcher.on('log', g.util.log);
+watcher.on('log', $.util.log);
 
 const bundle = (pkg) => {
   return pkg.bundle()
-    .on('error', g.util.log.bind(g.util, 'Browserify Error'))
+    .on('error', $.util.log.bind($.util, 'Browserify Error'))
     .pipe(vinylStream('bundle.js'))
     .pipe(vinylBuffer())
-    .pipe(g.uglify(config.uglify))
+    .pipe($.uglify(config.uglify))
     .pipe(gulp.dest('./html_elements/'));
 };
 
