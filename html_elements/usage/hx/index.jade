@@ -1,0 +1,18 @@
+include /html_elements/lib/main
+
+-
+  var title = '+hx | Usage'
+
++html
+  +head
+    +title
+  +body
+    +page
+      .page__gutter
+        each i in [1, 2, 3, 4, 5, 6, 7, 8]
+          +hx +hx
+        ul
+          each i in [1, 2, 3]
+            li
+              +hx(level="2") +hx(level="2")
+              +hx +hx

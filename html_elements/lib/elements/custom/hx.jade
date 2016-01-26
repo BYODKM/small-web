@@ -1,0 +1,24 @@
+mixin hx
+
+  //-
+    - Usage1: +hx
+    - Usage2: +hx(level="2")
+
+  -
+    hx = hx || 0
+    hx += 1
+
+    if (hx > 6)
+      hx = 6
+  
+    if (attributes.level && attributes.level.length)
+      hx = attributes.level * 1
+
+    var tag = 'h' + hx
+
+    attributes.level = null
+
+  #{tag}&attributes(attributes)(
+    class=tag
+    )
+      block
