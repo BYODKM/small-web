@@ -13,58 +13,79 @@ include /html_elements/lib/main
           dl
             dt
               label.label(for="input") .input
-            dd.div.u-margin--tb-1em
-              input.input(type="input" id="input" value="" placeholder="input")
+            dd.div
+              p
+                input.input#input(type="input" placeholder="input" value="")
+                +space
+                button.button(type="button") .button
           dl
             dt
               label.label(for="password") password
-            dd.div.u-margin--tb-1em
-              input.input(type="password" id="password" value="")
+            dd.div
+              p
+                input.input#password(type="password" value="")
           dl
             dt
-              | radio
+              label.label(for="select") +select
             dd.div
-              ul.ul.ul--narrow-gutter.u-margin--tb-1em
-                li.div.u-margin--tb-1em
-                  label.label
-                    input(type="radio" name="radio" value="")
-                    +space
-                    | radio
-                li.div.u-margin--tb-1em
-                  label.label
-                    input(type="radio" name="radio" value="")
-                    +space
-                    | radio
-                li.div.u-margin--tb-1em
-                  label.label
-                    input(type="radio" name="radio" value="")
-                    +space
-                    | radio
+              p
+                +select#select
+                  option(value="") option
+                  option(value="") The quick
+                  option(value="") brown fox
+                  option(value="") jumps over a lazy dog
+                +space
+                button.button(type="button") .button
           dl
-            dt
-              | checkbox
+            dt +radio
             dd.div
               ul.ul.ul--narrow-gutter.u-margin--tb-1em
-                li.div.u-margin--tb-1em
-                  label.label
-                    input(type="checkbox" name="checkbox" value="")
-                    +space
-                    | checkbox
-                li.div.u-margin--tb-1em
-                  label.label
-                    input(type="checkbox" name="checkbox" value="")
-                    +space
-                    | checkbox
-                li.div.u-margin--tb-1em
-                  label.label
-                    input(type="checkbox" name="checkbox" value="")
-                    +space
-                    | checkbox
+                li.div
+                  p
+                    label.label
+                      +radio(name="radio" value="")
+                      +space
+                      | Radio
+                li.div
+                  p
+                    label.label
+                      +radio(name="radio" value="")
+                      +space
+                      | Radio
+                li.div
+                  p
+                    label.label
+                      +radio(name="radio" value="")
+                      +space
+                      | Radio
+          dl
+            dt +checkbox
+            dd.div
+              ul.ul.ul--narrow-gutter.u-margin--tb-1em
+                li.div
+                  p
+                    label.label
+                      +checkbox(name="checkbox" value="")
+                      +space
+                      | Checkbox
+                li.div
+                  p
+                    label.label
+                      +checkbox(name="checkbox" value="")
+                      +space
+                      | Checkbox
+                li.div
+                  p
+                    label.label
+                      +checkbox(name="checkbox" value="")
+                      +space
+                      | Checkbox
           dl
             dt
               label.label(for="textarea") .textarea
-            dd.div.u-margin--tb-1em
-              textarea.textarea(id="textarea" value="" placeholder="textarea")
+            dd.div
+              p
+                textarea.textarea#textarea(placeholder="textarea" value="")
           p.u-text--center
             button.button(type="button") .button
             button.button(type="button") .button
