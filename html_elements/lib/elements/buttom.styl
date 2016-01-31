@@ -1,6 +1,6 @@
-:root
+.button
 
-  .button
+  :root &
     display inline-block
     box-sizing border-box
     padding 0 0.75em
@@ -19,3 +19,6 @@
     &:focus
     &:active
       outline none
+
+  & + &
+    margin-left 0.5rem
