@@ -1,15 +1,24 @@
-:root
+.textarea
 
-  .textarea
+  :root &
     display block
     box-sizing border-box
-    padding 0
+    padding 0.3em 0 0.3em 0.4em
     width 100%
-    border 1px solid
-    border-radius 0
+    min-height 10em
     resize vertical
+    border 1px solid
+    border-radius 3px
     appearance none
+    line-height 1.5
     -webkit-font-smoothing antialiased
+
+    +placeholder()
+      color darkgray
+      opacity 1
 
     &:focus
       outline none
+
+      +placeholder()
+        color transparent

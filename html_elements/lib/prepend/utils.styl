@@ -1,8 +1,18 @@
 :root
 
+  .u-text
+
+    for str in "left" "center" "right"
+
+      &--{str}
+        text-align unquote(str)
+
+        &.is-important
+          text-align unquote(str)
+
   .u-margin
 
-    for str in "0" "0px" "10px"
+    for str in "0" "0px" "1em" "10px"
 
       &--t-{str}
         margin-top unquote(str)

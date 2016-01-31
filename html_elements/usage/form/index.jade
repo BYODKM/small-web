@@ -1,0 +1,70 @@
+include /html_elements/lib/main
+
+-
+  var title = 'form | Usage'
+
++html
+  +head
+    +title
+  +body
+    +page
+      .page__gutter
+        form
+          dl
+            dt
+              label.label(for="input") .input
+            dd.div.u-margin--tb-1em
+              input.input(type="input" id="input" value="" placeholder="input")
+          dl
+            dt
+              label.label(for="password") password
+            dd.div.u-margin--tb-1em
+              input.input(type="password" id="password" value="")
+          dl
+            dt
+              | radio
+            dd.div
+              ul.ul.ul--narrow-gutter.u-margin--tb-1em
+                li.div.u-margin--tb-1em
+                  label.label
+                    input(type="radio" name="radio" value="")
+                    +space
+                    | radio
+                li.div.u-margin--tb-1em
+                  label.label
+                    input(type="radio" name="radio" value="")
+                    +space
+                    | radio
+                li.div.u-margin--tb-1em
+                  label.label
+                    input(type="radio" name="radio" value="")
+                    +space
+                    | radio
+          dl
+            dt
+              | checkbox
+            dd.div
+              ul.ul.ul--narrow-gutter.u-margin--tb-1em
+                li.div.u-margin--tb-1em
+                  label.label
+                    input(type="checkbox" name="checkbox" value="")
+                    +space
+                    | checkbox
+                li.div.u-margin--tb-1em
+                  label.label
+                    input(type="checkbox" name="checkbox" value="")
+                    +space
+                    | checkbox
+                li.div.u-margin--tb-1em
+                  label.label
+                    input(type="checkbox" name="checkbox" value="")
+                    +space
+                    | checkbox
+          dl
+            dt
+              label.label(for="textarea") .textarea
+            dd.div.u-margin--tb-1em
+              textarea.textarea(id="textarea" value="" placeholder="textarea")
+          p.u-text--center
+            button.button(type="button") .button
+            button.button(type="button") .button

@@ -1,18 +1,23 @@
-:root
+.input
 
-  .input
+  :root &
     box-sizing border-box
-    padding 0
-    width 10em
+    padding 0 0.3em 0 0.4em
+    width 13em
+    height 2em
     border 1px solid
-    border-radius 0
+    border-radius 3px
     font-family sans-serif
     vertical-align middle
     appearance none
     -webkit-font-smoothing antialiased
 
+    +placeholder()
+      color darkgray
+      opacity 1
+
     &:focus
       outline none
 
-    &::-moz-placeholder
-      opacity 1
+      +placeholder()
+        color transparent
