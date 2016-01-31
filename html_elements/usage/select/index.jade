@@ -1,0 +1,29 @@
+include /html_elements/lib/main
+
+-
+  var title = '+select | Usage'
+
++html
+  +head
+    +title
+  +body
+    +page
+      .page__gutter
+        p
+          select
+            option select
+            option The quick
+            option brown fox
+            option jumps over a lazy dog
+        p
+          select.select
+            option select.select
+            option The quick
+            option brown fox
+            option jumps over a lazy dog
+        p
+          +select
+            option +select
+            option The quick
+            option brown fox
+            option jumps over a lazy dog

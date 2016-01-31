@@ -1,0 +1,13 @@
+mixin select
+
+  //-
+    - Usage: +select
+    - Yield: span.select > select
+
+  -
+    var classes = attributes.class
+    attributes.class = null
+
+  span.select(class=classes)
+    select&attributes(attributes).select__self
+      block
