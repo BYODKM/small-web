@@ -1,0 +1,15 @@
+mixin radio
+
+  //- Usage: +radio(name="" value="")
+
+  -
+    var classes = attributes.class
+    attributes.class = null
+
+  span.radio(
+    class=classes
+  )
+    input&attributes(attributes).radio__self(
+      type="radio"
+    )
+    span.radio__status

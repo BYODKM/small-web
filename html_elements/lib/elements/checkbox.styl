@@ -1,0 +1,16 @@
+.checkbox
+
+  & &__self
+    display none
+
+  & &__status
+    display inline-block
+    size 1em
+    font-family icon-font
+    font-size 1.1em
+
+    &:before
+      content "\f372"
+
+  & &__self:checked + &__status:before
+    content "\f373"
