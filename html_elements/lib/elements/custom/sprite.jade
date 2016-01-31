@@ -12,7 +12,5 @@ mixin sprite
     attributes.alt = null
 
   if src.length
-    span&attributes(attributes).sprite(
-      class="sprite--" + src
-      )
+    span&attributes(attributes).sprite(class="sprite--" + src)
       | #{alt}
