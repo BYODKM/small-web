@@ -1,10 +1,19 @@
 mixin space
 
   //-
-    - Usage: +space
-    - Yield: ' '
+    - Usage1: +space
+    - Yield1: ' '
+    - Usage2: +space(by="2")
+    - Yield2: span.space.space--2x
 
   -
     var space = ' '
+    var by = ''
+    if (attributes.by && attributes.by.length)
+      by = attributes.by
 
-  | #{space}
+  if by.length
+    span.space(class="space--#{by}x")
+      | #{space}
+  else
+    | #{space}
