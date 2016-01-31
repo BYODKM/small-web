@@ -10,11 +10,14 @@ include /html_elements/lib/main
     +page
       .page__gutter
         ol
-          li#top
-            a(href="#bottom") To bottom
-          - var i = 1
-          while i < 99
-            - ++i
-            li
-          li#bottom
-            a(href="#top") To top
+          - var i = 0
+          while i < 100
+            - i++
+            if i === 1
+              li#top
+                a(href="#bottom") To bottom
+            else if i === 100
+              li#bottom
+                a(href="#top") To top
+            else
+              li

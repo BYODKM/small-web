@@ -26,17 +26,17 @@
   boxUsageIndex ? the = boxUsageIndex : the = BoxUsageIndex
 
 div(class="#{$}")
-  h1(class="#{$}__title div")
+  h1.div(class="#{$}__title")
     a(href="https://github.com/internets-inc/small-web" target="_blank" class="#{$}__github")
       +icon(name="ion-social-github")
     | Usage
   each group in the.groups
-    dl(class="#{$}__group div")
-      dt(class="#{$}__label div")=group.label
+    dl.div(class="#{$}__group")
+      dt.div(class="#{$}__label")=group.label
       each item in group.items
-        dd(class="#{$}__item div")
-          p(class="#{$}__demo div")
-            a(href="./#{item}/" class="#{$}__link a")=item
-          p(class="#{$}__code div")
-            a(href="./#{item}/index.jade" target="_blank" class="a")
+        dd.div(class="#{$}__item")
+          p.div(class="#{$}__demo")
+            a.a(href="./#{item}/" class="#{$}__link")=item
+          p.div(class="#{$}__code")
+            a.a(href="./#{item}/index.jade" target="_blank")
               code.code Code

@@ -8,7 +8,7 @@
     "sprite": "gulp sprite && gulp stylus",
     "build": "gulp build",
     "watch": "gulp watch",
-    "serve": "gulp serve"
+    "serve": "gulp build && gulp watch"
   },
   "repository": {
     "type": "git",
