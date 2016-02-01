@@ -1,6 +1,6 @@
 {
   "name": "small-web",
-  "version": "1.0.0",
+  "version": "1.0.5",
   "private": true,
   "description": "Small Code for the Larger Site",
   "scripts": {

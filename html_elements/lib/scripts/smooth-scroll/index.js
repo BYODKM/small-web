@@ -17,7 +17,7 @@
     clicked = function(ev) {
       var currentScrollTop, goal, id, link, scroll, startTime, target, targetScrollTop, touchstart;
       ev.preventDefault();
-      link = this;
+      link = ev.currentTarget;
       id = link.hash.replace(/(^#|\?.*)/g, '');
       target = document.getElementById(id);
       if (id === 'top' && !target) {
@@ -69,7 +69,7 @@
       if (link.classList.contains(config.disableClass)) {
         continue;
       }
-      if (link.getAttribute('href').substring(0, 1) !== '#') {
+      if (!link.getAttribute('href').match(/^#/)) {
         continue;
       }
       str = link.hash.replace(/(^#|\?.*)/g, '');

@@ -16,13 +16,11 @@ do ->
     clicked = (ev)->
 
       ev.preventDefault()
-      link = this
+      link = ev.currentTarget
 
       id = link.hash.replace(/(^#|\?.*)/g, '')
       target = document.getElementById(id)
-
-      if id is 'top' and !target
-        target = document.body
+      target = document.body if id is 'top' and !target
 
       unless target then return
 
@@ -61,7 +59,7 @@ do ->
 
     for link in links by -1
       if link.classList.contains(config.disableClass) then continue
-      if link.getAttribute('href').substring(0, 1) isnt '#' then continue
+      if !link.getAttribute('href').match(/^#/) then continue
       str = link.hash.replace(/(^#|\?.*)/g, '')
       if str.length
         link.addEventListener('click', clicked, false)
