@@ -1,0 +1,26 @@
+include /html_elements/lib/main
+
+-
+  var title = '+checkbox | Usage'
+
++html
+  +head
+    +title
+  +body
+    +page
+      .page__gutter
+        p
+          label
+            input(type="checkbox")
+            +space
+            | A: input type="checkbox"
+        p
+          label
+            +checkbox
+            +space
+            | B: +checkbox
+        p
+          +checkbox
+          +space
+          | C: Without 
+          code.code label

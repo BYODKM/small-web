@@ -1,0 +1,26 @@
+include /html_elements/lib/main
+
+-
+  var title = '+radio | Usage'
+
++html
+  +head
+    +title
+  +body
+    +page
+      .page__gutter
+        p
+          label
+            input(type="radio" name="radio")
+            +space
+            | A: input type="radio"
+        p
+          label
+            +radio(name="radio")
+            +space
+            | B: +radio
+        p
+          +radio(name="radio")
+          +space
+          | C: Without 
+          code.code label
