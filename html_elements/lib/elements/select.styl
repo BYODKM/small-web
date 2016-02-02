@@ -19,30 +19,33 @@
       outline none
 
   :root &
-    position relative
     select()
 
     &:not(select)
+      position relative
       padding 0
       border 0
       border-radius 0
+      font-family icon-font
 
-    &:not(select):before
-    &:not(select):after
-      empty-content-block()
-      pointer-events none
+      &:before
+      &:after
+        pointer-events none
 
-    &:not(select):before
-      absolute 1px 1px null null
-      border-radius 4px
-      size 4em 1.9em
-      background-image linear-gradient(90deg, rgba(white, 0), white 66%)
+      &:before
+        content ""
+        absolute 0 0 null null
+        box-sizing border-box
+        border 1px solid
+        border-radius 0 4px 4px 0
+        size 1.9em 2em
+        background-color white
 
-    &:not(select):after
-      absolute 0.9em 0.7em null null
-      size 0
-      border 5px solid transparent
-      border-top-color currentColor
+      &:after
+        content "\f104"
+        absolute 0.6em 0.7em null null
+        font-size 0.9em
 
   & &__self
     select()
+    font-family sans-serif
