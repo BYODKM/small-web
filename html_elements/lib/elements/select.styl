@@ -1,15 +1,13 @@
 .select
-  $w = 8em
 
-  :root &
-    position relative
-    box-sizing border-box
+  select()
     display inline-block
-    padding 0 0 0 0.5em
+    box-sizing border-box
+    padding 0 0 0 0.4em
     border 1px solid
     border-radius 4px
-    width $w
     height 2em
+    max-width 100%
     overflow hidden
     appearance none
     vertical-align middle
@@ -17,35 +15,34 @@
     background-color white
     -webkit-font-smoothing antialiased
 
-    &:before
-    &:after
-      empty-content-block()
-      overflow hidden
-      pointer-events none
-
-    &:before
-      absolute 0 0 null null
-      size 2em
-      background-image linear-gradient(90deg, rgba(white, 0.5), white 33%)
-
-    &:after
-      absolute 0.8em 0.5em null null
-      size 0
-      border 5px solid
-      border-bottom-color transparent
-      border-right-color transparent
-      border-left-color transparent
-
-  & &__self
-    box-sizing border-box
-    width $w * 1.2
-    height 1.8em
-    border 0
-    white-space nowrap
-    cursor pointer
-    appearance none
-    background none
-    -webkit-font-smoothing antialiased
-
     &:focus
       outline none
+
+  :root &
+    position relative
+    select()
+
+    &:not(select)
+      padding 0
+      border 0
+      border-radius 0
+
+    &:not(select):before
+    &:not(select):after
+      empty-content-block()
+      pointer-events none
+
+    &:not(select):before
+      absolute 1px 1px null null
+      border-radius 4px
+      size 4em 1.9em
+      background-image linear-gradient(90deg, rgba(white, 0), white 66%)
+
+    &:not(select):after
+      absolute 0.9em 0.7em null null
+      size 0
+      border 5px solid transparent
+      border-top-color currentColor
+
+  & &__self
+    select()

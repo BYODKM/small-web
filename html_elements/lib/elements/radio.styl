@@ -1,7 +1,14 @@
 .radio
 
+  :root &
+    position relative
+
   & &__self
-    display none
+    position absolute
+    z-index 2
+    top 0.1em
+    left 0
+    opacity 0
 
   & &__status
     display inline-block
@@ -11,6 +18,9 @@
 
     &:before
       content "\f3a6"
+      position relative
+      z-index 1
+      top 1px
 
   & &__self:checked + &__status:before
     content "\f3a7"
