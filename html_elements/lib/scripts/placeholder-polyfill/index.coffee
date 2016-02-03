@@ -1,7 +1,7 @@
 do ->
   'use strict'
 
-  hasOwnAbility = ->
+  hasOwnAbility = do ->
     input = document.createElement('input')
     if 'placeholder' of input
       return true

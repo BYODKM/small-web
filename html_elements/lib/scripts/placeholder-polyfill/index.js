@@ -1,7 +1,7 @@
 (function() {
   'use strict';
   var DOMContentLoaded, blurred, focused, hasOwnAbility;
-  hasOwnAbility = function() {
+  hasOwnAbility = (function() {
     var input;
     input = document.createElement('input');
     if ('placeholder' in input) {
@@ -9,7 +9,7 @@
     } else {
       return false;
     }
-  };
+  })();
   if (hasOwnAbility) {
     return;
   }
