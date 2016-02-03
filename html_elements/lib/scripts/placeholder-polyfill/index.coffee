@@ -3,10 +3,7 @@ do ->
 
   hasOwnAbility = do ->
     input = document.createElement('input')
-    if 'placeholder' of input
-      return true
-    else
-      return false
+    return 'placeholder' of input
 
   if hasOwnAbility then return
 

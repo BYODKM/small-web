@@ -4,11 +4,7 @@
   hasOwnAbility = (function() {
     var input;
     input = document.createElement('input');
-    if ('placeholder' in input) {
-      return true;
-    } else {
-      return false;
-    }
+    return 'placeholder' in input;
   })();
   if (hasOwnAbility) {
     return;
