@@ -30,21 +30,22 @@
 
       &:before
       &:after
+        box-sizing border-box
+        size 1.6em 2em
         pointer-events none
 
       &:before
         content ""
         absolute 0 0 null null
-        box-sizing border-box
         border 1px solid
         border-radius 0 4px 4px 0
-        size 1.9em 2em
         background-color white
 
       &:after
-        content "\f104"
-        absolute 0.6em 0.7em null null
-        font-size 0.9em
+        content "\f35f"
+        absolute 0 0 null null
+        padding-top 0.4em
+        text-align center
 
   & &__self
     select()
