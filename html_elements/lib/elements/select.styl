@@ -26,27 +26,22 @@
       padding 0
       border 0
       border-radius 0
-      font-family icon-font
-
-      &:before
-      &:after
-        box-sizing border-box
-        size 1.6em 2em
-        pointer-events none
-
-      &:before
-        content ""
-        absolute 0 0 null null
-        border 1px solid
-        border-radius 0 4px 4px 0
-        background-color white
-
-      &:after
-        content "\f35f"
-        absolute 0 0 null null
-        padding-top 0.4em
-        text-align center
 
   & &__self
     select()
-    font-family sans-serif
+
+  & &__arrow
+    absolute 0 0 null null
+    box-sizing border-box
+    border 1px solid
+    border-radius 0 4px 4px 0
+    size 1.6em 2em
+    font-family icon-font
+    pointer-events none
+    background-color white
+
+    &:before
+      content "\f35f"
+      display block
+      padding-top 0.4em
+      text-align center

@@ -2,7 +2,6 @@ mixin select
 
   //-
     - Usage: +select
-    - Yield: span.select > select
 
   -
     var classes = attributes.class
@@ -11,3 +10,4 @@ mixin select
   span.select(class=classes)
     select&attributes(attributes).select__self
       block
+    span.select__arrow.js-pointerEventsNone
