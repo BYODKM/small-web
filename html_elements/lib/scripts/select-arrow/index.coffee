@@ -14,7 +14,8 @@ do ->
     unless items.length then return
 
     clicked = (ev)->
-      scope = ev.currentTarget.parentNode()
+      target = ev.currentTarget
+      scope = target.parentNode
       select = scope.querySelector('select')
       select.focus() if select
       return

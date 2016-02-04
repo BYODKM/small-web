@@ -17,8 +17,9 @@
       return;
     }
     clicked = function(ev) {
-      var scope, select;
-      scope = ev.currentTarget.parentNode();
+      var scope, select, target;
+      target = ev.currentTarget;
+      scope = target.parentNode;
       select = scope.querySelector('select');
       if (select) {
         select.focus();
