@@ -10,12 +10,13 @@ do ->
 
   DOMContentLoaded = ->
 
-    items = document.querySelectorAll('.js-pointerEventsNone')
+    items = document.querySelectorAll('.select__arrow')
     unless items.length then return
 
     clicked = (ev)->
-      ev.preventDefault()
-      ev.stopPropagation()
+      scope = ev.currentTarget.parentNode()
+      select = scope.querySelector('select')
+      select.focus() if select
       return
 
     for item in items by -1

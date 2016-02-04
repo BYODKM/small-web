@@ -12,13 +12,17 @@
   }
   DOMContentLoaded = function() {
     var clicked, i, item, items;
-    items = document.querySelectorAll('.js-pointerEventsNone');
+    items = document.querySelectorAll('.select__arrow');
     if (!items.length) {
       return;
     }
     clicked = function(ev) {
-      ev.preventDefault();
-      ev.stopPropagation();
+      var scope, select;
+      scope = ev.currentTarget.parentNode();
+      select = scope.querySelector('select');
+      if (select) {
+        select.focus();
+      }
     };
     for (i = items.length - 1; i >= 0; i += -1) {
       item = items[i];
