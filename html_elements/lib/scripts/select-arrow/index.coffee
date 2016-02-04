@@ -14,10 +14,10 @@ do ->
     unless items.length then return
 
     clicked = (ev)->
-      target = ev.currentTarget
-      scope = target.parentNode
-      select = scope.querySelector('select')
-      select.focus() if select
+      elm = ev.currentTarget
+      event = document.createEvent('MouseEvents')
+      event.initMouseEvent('mousedown', true, true, window)
+      elm.dispatchEvent(event)
       return
 
     for item in items by -1

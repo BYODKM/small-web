@@ -17,13 +17,11 @@
       return;
     }
     clicked = function(ev) {
-      var scope, select, target;
-      target = ev.currentTarget;
-      scope = target.parentNode;
-      select = scope.querySelector('select');
-      if (select) {
-        select.focus();
-      }
+      var elm, event;
+      elm = ev.currentTarget;
+      event = document.createEvent('MouseEvents');
+      event.initMouseEvent('mousedown', true, true, window);
+      elm.dispatchEvent(event);
     };
     for (i = items.length - 1; i >= 0; i += -1) {
       item = items[i];
