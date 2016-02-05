@@ -10,14 +10,14 @@
     return;
   }
   focused = function() {
-    this.classList.remove('is-polyfill');
+    this.classList.remove('is-polyfilled');
     if (this.value === this.getAttribute('placeholder')) {
       this.value = '';
     }
   };
   blurred = function() {
     if (this.value === '') {
-      this.classList.add('is-polyfill');
+      this.classList.add('is-polyfilled');
       this.value = this.getAttribute('placeholder');
     }
   };
@@ -31,7 +31,7 @@
       item = items[i];
       if (item.value === '') {
         item.value = item.getAttribute('placeholder');
-        item.classList.add('is-polyfill');
+        item.classList.add('is-polyfilled');
         item.addEventListener('focus', focused, false);
         item.addEventListener('blur', blurred, false);
       }

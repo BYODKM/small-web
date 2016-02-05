@@ -8,14 +8,14 @@ do ->
   if hasOwnAbility then return
 
   focused = ->
-    this.classList.remove('is-polyfill')
+    this.classList.remove('is-polyfilled')
     if this.value is this.getAttribute('placeholder')
       this.value = ''
     return
 
   blurred = ->
     if this.value is ''
-      this.classList.add('is-polyfill')
+      this.classList.add('is-polyfilled')
       this.value = this.getAttribute('placeholder')
     return
 
@@ -27,7 +27,7 @@ do ->
     for item in items by -1
       if item.value is ''
         item.value = item.getAttribute('placeholder')
-        item.classList.add('is-polyfill')
+        item.classList.add('is-polyfilled')
         item.addEventListener('focus', focused, false)
         item.addEventListener('blur', blurred, false)
 

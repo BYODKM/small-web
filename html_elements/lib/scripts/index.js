@@ -1,8 +1,8 @@
-require('./_class-list-polyfill');
+require('./_classlist-polyfill');
+require('./_no-features');
 require('./_global');
-require('./has-touch');
 require('./placeholder-polyfill');
-require('./select-arrow');
 require('./smooth-scroll');
 require('./touch-start');
-require('./utils');
+// require('./utils');
+// Don't require utils here.
