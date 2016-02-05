@@ -21,10 +21,11 @@
     z-index 2
     display block
     box-sizing border-box
-    border 2px solid silver
+    border 3px solid transparent
     border-radius 1em
     size 2em
     background-color white
+    background-clip padding-box
     transition 0.1s
 
   & &__self
@@ -37,4 +38,4 @@
 
   & &__self:checked + &__box &__bar
     left 2em
-    background-color black
+    background-color dimgray
