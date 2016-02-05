@@ -1,0 +1,96 @@
+include /html_elements/lib/main
+
+-
+  var title = 'default | Usage'
+
+doctype
+html
+  +head
+    +title
+  body
+    h1 h1
+    h2 h2
+    h3 h3
+    h4 h4
+    h5 h5
+    h6 h6
+    p
+      | Lorem ipsum dolor sit amet,
+      +space
+      | consectetur adipiscing elit,
+      +space
+      | sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+      +space
+      | Ut enim ad minim veniam,
+      +space
+      | quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+    p
+      a(href="../")
+        | Some links.
+    blockquote
+      p
+        | blockquote
+    p
+      img(src="http://placehold.it/50x50" alt="")
+      |  img
+    ul
+      li A
+      li B
+      li C
+    ol
+      li A
+      li B
+      li C
+    dl
+      dt dt
+      dd dd
+      dd dd
+    p
+      button(type="button") button
+    p
+      input(type="button" value="input")
+    p
+      input(type="checkbox")
+      |  checkbox
+    p
+      input(type="radio")
+      |  radio
+    p
+      input(type="text" value="" placeholder="placeholder")
+    p
+      textarea(value="" placeholder="placeholder")
+    p
+      select
+        option option
+        option option
+        option option
+    table
+      caption
+        | Jimi Hendrix - albums
+      thead
+        tr
+          th Album
+          th Year
+          th Price
+      tfoot
+        tr
+          th Album
+          th Year
+          th Price
+      tbody
+        tr
+          td Are You Experienced
+          td 1967
+          td $10.00
+        tr
+          td Axis: Bold as Love
+          td 1967
+          td $12.00
+        tr
+          td Electric Ladyland
+          td 1968
+          td $10.00
+        tr
+          td Band of Gypsys
+          td 1970
+          td $12.00
