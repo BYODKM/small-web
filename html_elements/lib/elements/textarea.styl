@@ -1,27 +1,10 @@
 .textarea
+  input-textarea-style()
 
   :root &
     display block
-    box-sizing border-box
     padding 0.3em 0 0.3em 0.4em
     width 100%
     min-height 10em
     resize vertical
-    border 1px solid black
-    border-radius 3px
-    appearance none
     line-height 1.5
-    -webkit-font-smoothing antialiased
-
-    +placeholder()
-      color darkgray
-      opacity 1
-
-    &.is-polyfilled
-      color darkgray
-
-    &:focus
-      outline none
-
-      +placeholder()
-        color transparent

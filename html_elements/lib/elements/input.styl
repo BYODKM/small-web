@@ -1,26 +1,7 @@
 .input
+  input-textarea-style()
 
   :root &
-    box-sizing border-box
     padding 0 0.3em 0 0.4em
-    width 13em
-    height 2em
-    border 1px solid black
-    border-radius 3px
-    font-family sans-serif
+    size 13em 2em
     vertical-align middle
-    appearance none
-    -webkit-font-smoothing antialiased
-
-    +placeholder()
-      color darkgray
-      opacity 1
-
-    &.is-polyfilled
-      color darkgray
-
-    &:focus
-      outline none
-
-      +placeholder()
-        color transparent

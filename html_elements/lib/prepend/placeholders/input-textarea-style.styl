@@ -1,0 +1,22 @@
+input-textarea-style()
+
+  :root &
+    box-sizing border-box
+    border 1px solid black
+    border-radius 3px
+    appearance none
+    font-family sans-serif
+    -webkit-font-smoothing antialiased
+
+    +placeholder()
+      color darkgray
+      opacity 1
+
+    &.is-polyfilled
+      color darkgray
+
+    &:focus
+      outline none
+
+      +placeholder()
+        color transparent
