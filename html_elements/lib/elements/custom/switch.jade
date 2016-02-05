@@ -1,0 +1,14 @@
+mixin switch
+
+  //-
+    - Usage: +switch(checked="true")
+    - Yield: span.switch > input(type="checkbox" checked="true")
+
+  -
+    var classes = attributes.class
+    attributes.class = null
+
+  span.switch(class=classes)
+    input&attributes(attributes).switch__self(type="checkbox")
+    span.switch__box
+      span.switch__bar

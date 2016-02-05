@@ -1,0 +1,40 @@
+.switch
+
+  :root &
+    position relative
+    display inline-block
+    border-radius 1em
+    size 4em 2em
+    overflow hidden
+    line-height 2em
+    vertical-align middle
+
+  & &__box
+    absolute 0 null null 0
+    z-index 1
+    display block
+    size 100%
+    background-color silver
+
+  & &__bar
+    absolute 0 null null 0
+    z-index 2
+    display block
+    box-sizing border-box
+    border 2px solid silver
+    border-radius 1em
+    size 2em
+    background-color white
+    transition 0.1s
+
+  & &__self
+    position relative
+    z-index 3
+    display block
+    size 100%
+    opacity 0
+    cursor pointer
+
+  & &__self:checked + &__box &__bar
+    left 2em
+    background-color black
