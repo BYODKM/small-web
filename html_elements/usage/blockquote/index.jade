@@ -1,0 +1,30 @@
+include /html_elements/lib/main
+
+-
+  var title = '.blockquote | Usage'
+
++html
+  +head
+    +title
+  +body
+    +page
+      .page__gutter
+        h1 .blockquote
+        p
+          code.code
+            | blockquote.blockquote.blockquote--email
+        blockquote.blockquote.blockquote--email
+          p
+            | blockquote
+          blockquote.blockquote.blockquote--email
+            p
+              | blockquote
+            blockquote.blockquote.blockquote--email
+              p
+                | blockquote
+              blockquote.blockquote.blockquote--email
+                p
+                  | blockquote
+                p
+                  code.code
+                    | blockquote.blockquote.blockquote--email
