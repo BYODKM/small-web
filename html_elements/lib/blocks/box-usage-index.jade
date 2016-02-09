@@ -27,7 +27,7 @@
 
 div(class="#{$}")
   h1.div(class="#{$}__title")
-    a(href="https://github.com/internets-inc/small-web" target="_blank" class="#{$}__github")
+    a(href="https://github.com/internets-inc/small-web" class="#{$}__github")
       +icon(name="ion-social-github")
     | Usage
   each group in the.groups
@@ -38,5 +38,5 @@ div(class="#{$}")
           p.div(class="#{$}__demo")
             a.a(href="./#{item}/" class="#{$}__link")=item
           p.div(class="#{$}__code")
-            a.a(href="./#{item}/index.jade" target="_blank")
+            a.a(href="./#{item}/index.jade")
               code.code Code
