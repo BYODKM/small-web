@@ -13,7 +13,7 @@ cache:
     - bower_components
     - node_modules
 after_success:
-  - rm .gitignore && mv gh-pages.ignore .gitignore
+  - rm .gitignore && cp gh-pages.ignore .gitignore
   - git config --global user.name "TRAVIS"
   - git config --global user.email "hello@internets.co.jp"
   - git add --all
