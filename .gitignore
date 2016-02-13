@@ -1,3 +1,6 @@
+*.html
 bower_components
+html_elements/bundle-*.png
+html_elements/bundle.*
 node_modules
 npm-debug.log
