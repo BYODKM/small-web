@@ -20,6 +20,9 @@
     "url": "https://github.com/internets-inc/small-web/issues"
   },
   "homepage": "https://github.com/internets-inc/small-web",
+  "engines": {
+    "node": ">= 4.0.0"
+  },
   "devDependencies": {
     "browser-sync": "~2.11.0",
     "browserify": "~13.0.0",
