@@ -4,10 +4,10 @@ node_js:
 branches:
   only:
     - master
-before_script:
-  - git checkout -b gh-pages
 script:
-  - "npm start"
+  - "npm run bower"
+  - "npm run sprite"
+  - "npm run build"
 cache:
   directories:
     - bower_components
@@ -16,7 +16,7 @@ after_success:
   - git -c user.name "TRAVIS" -c user.email "hello@internets.co.jp"
   - git add .
   - git commit -m "Add dist"
-  - git push -f -q https://$API_KEY@github.com/internets-inc/small-web.git gh-pages > /dev/null 2>&1
+  - git push -qf https://$API_KEY@github.com/internets-inc/small-web.git gh-pages > /dev/null 2>&1
 notifications:
   email:
     - hello@internets.co.jp
