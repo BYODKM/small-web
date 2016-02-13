@@ -16,9 +16,9 @@ after_success:
   - rm .gitignore && mv gh-pages.ignore .gitignore
   - git config --global user.name "TRAVIS"
   - git config --global user.email "hello@internets.co.jp"
-  - git add .
+  - git add --ignore-removal
   - git commit -m "Add dist"
-  - git push -qf https://$API_KEY@github.com/internets-inc/small-web.git gh-pages > /dev/null 2>&1
+  - git push -qf "https://${API_KEY}@github.com/internets-inc/small-web.git" master:gh-pages > /dev/null 2>&1
 notifications:
   email:
     - hello@internets.co.jp
