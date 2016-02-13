@@ -1,0 +1,22 @@
+language: node_js
+node_js:
+  - "4.1"
+branches:
+  only:
+    - master
+before_script:
+  - git checkout -b gh-pages
+script:
+  - "npm start"
+cache:
+  directories:
+    - bower_components
+    - node_modules
+after_success:
+  - git -c user.name "TRAVIS" -c user.email "hello@internets.co.jp"
+  - git add .
+  - git commit -m "Add dist"
+  - git push -f -q https://$API_KEY@github.com/internets-inc/small-web.git gh-pages > /dev/null 2>&1
+notifications:
+  email:
+    - hello@internets.co.jp
