@@ -16,7 +16,6 @@ before_install:
   - cp deploy.key ~/.ssh/
   - chmod 600 ~/.ssh/deploy.key
   - echo -e "Host github.com\n\tStrictHostKeyChecking no\nIdentityFile ~/.ssh/deploy.key\n" >> ~/.ssh/config
-  - ssh -T git@github.com
 after_success:
   - rm .gitignore && cp gh-pages.ignore .gitignore
   - git config user.name "TRAVIS"
