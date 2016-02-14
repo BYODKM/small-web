@@ -1,24 +1,27 @@
 language: node_js
 node_js:
-  - "4.1"
+  - '4.1'
 branches:
   only:
     - master
 script:
-  - "npm run bower"
-  - "npm run sprite"
-  - "npm run build"
+  - npm run bower
+  - npm run sprite
+  - npm run build
 cache:
   directories:
     - bower_components
     - node_modules
 after_success:
   - rm .gitignore && cp gh-pages.ignore .gitignore
-  - git config --global user.name "TRAVIS"
-  - git config --global user.email "hello@internets.co.jp"
-  - git add --all
+  - git config user.name "TRAVIS"
+  - git config user.email "hello@internets.co.jp"
+  - git add --A
   - git commit -m "Add dist"
-  - git push -qf "https://${API_KEY}@github.com/internets-inc/small-web.git" master:gh-pages > /dev/null 2>&1
+  - git push -qf "https://${GH_TOKEN}@github.com/internets-inc/small-web.git" master:gh-pages > /dev/null 2>&1
 notifications:
   email:
     - hello@internets.co.jp
+env:
+  global:
+    secure: PP9JeHW737mm2spUuPhQo/v/jTO3qc+4dNBWtvYP9MLUc8wHif2ORVJoLItUq3cTBh4/mOJxBPf8WWuli8B/ZItI9jYWSxtDwbO2lI1+WIVtHpRGdBQDihvOehzVRzze+SFf/YmSrwwXlWOBs27oXgcDzbGEWmBU5ClQs6lkVd+WouSDyYlqPgyhuGm4WjRwLWuVvHapSO4gjtGCwPYAyke5k6MdwxdozydCnJGNAn2QP28lk2OtT2mH5qYh5fwofVTbfJEoot5V3GekTIoxGqMoGCQh2ynhwe/vQHHIUWQKfIVwG5FHvr7z6e1Gz2IryfWoMe5xo7R/BS1lcjRPnGoUTaqqftIxZEew+r548d9+uVsm+o463svLqMkFyfq5GzlwIR/0VbqY0x39SHtIbdgYmgHgewBArb+5DYLUb7oaobntX7F0P/uFd97kbZHd2h8EqQc2iLuPfOIqvxy8CVfNvtzZ8BWTP2qFDDCBlXVjCL68LjtMc3GWsvYMMxAVIJqpsqQVGV34bI+URym1G24HSregENdsnpB0OEsbgxkyw5Vhxae3On3+MR3Mgf4n6cthI6wMBIjWz3znm5LdZfy2gNDbakk3nfqcqYBcrIcDXD61DUS6Mx0zvI2HcxI4XiaPpO/4aS8C0JtwpO4I8Q0pZjmWSQ7WxPezV0dZCmE=
