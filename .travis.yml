@@ -18,10 +18,10 @@ after_success:
   - git config user.email "hello@internets.co.jp"
   - git add -A
   - git commit -m "Add dist"
-  - git push -qf "https://${GH_TOKEN}@github.com/internets-inc/small-web.git" master:gh-pages > /dev/null 2>&1
+  - '[$GH_TOKEN] && git push -qf https://${GH_TOKEN}@github.com/internets-inc/small-web.git master:gh-pages > /dev/null 2>&1'
 notifications:
   email:
     - hello@internets.co.jp
 env:
   global:
-    - secure: EsTVfHaL4goUUw7rwcOhbMdFLPLiPGZmEASwDRYg16KCnXUYF/MAMMDosCFrOmatDFsYOKmJPOfPCPRsFqYc2a4ZXpeUC8nkH/Qw4pv6q0XdfOT+DYEwI3BgXVXWYhM5+dpnPCHkj0PQbIhfqgmGZ4mCA2OSaiS4SRGixr2DmKDOAZ6BITJFVUQqYDdXuoebRIQ1d7vMeLJkiU2Q84U7jhLviFCjq4659D8/tCAgSNcpd3JU6kL7vyEJCR6mxCtc9VB6bR/VvzlfWElZgZo5A5462qsyBrTi9sJ/aazCex05Ly4Nlhmo1mkIrmCjTGA7k1NJOOdtwAaqJmnE9LYAzXUum80vBJCYfiw0HYrLML4pMG2SCR7aD0y0u8kHet5LVu7xW8eHk6Fmwzd5yWZyb0uqtnZREylCW0PwvbubR9RYFbmi9bRZIgpfq4djCguGmL0XmbmMTZ+bc9hf1LlwWg/1+Z3cYjWGWZ7KnXlj9dElLgXbdfiFXvxy1pGADDEsFfgQJ3D5RzHSaXifUOqoojmvGYLx9UGypPmQboujGzh4H3IX60uuHv3lQL/6XB4AcoYBxbE3yTz58RCkkjapexgLUmCodFAjtQx0ogHCGWlDkJBaBaBaqKk9sRlNh0xqZuArj4KkxUAoCBI1D/DqYE9mrddhazxTab6pFoDzCgw=
+    - secure: O+LXR5mN1meddJQn3zKto8nel/mA6d8IIcAvzl50ca64hSxwyWndmmSg7m2aAzrfdxMpxGTJWiV/0ADEMJAsFOWSjvHpcLzW5EqVXXbpKFjurtodSCmt+gz37N8ljj0npGawxe4p2S9e2ENJiyrVhOB5dqLDC+rvmP1tag82Qtaz3T8JMG3AYiyoRDyPL7oRlmcHqg58Ekt9lGhoWsbBHODXf6+Hu4VEKqrU969Sq20zPX2Ab704uQLA9ebQjUhYr7s93td6cSLWH2RooNYhWqoNaEYl306R4u1qToqQqqG0BRvhtCOmAXIV49ie82n87Ma50vDCTKOu+Rcl0UNqF/TvJuu9x6qfJN++Ja+afPtoKjdoT03iOayzhYaD1W7YDUgQ7c5GclmuFywxluEpXjaQnlMjXoZ4SZHLlLxBCpR5HtL0OK4kOirE/ItYxMUyoVAXjwtstDx9Mz7c2kq/4fquHj2oluAlOUTAfRU5na79SpbJI9oOFNvGDuzBaEoBR7lE8VjXwNKc6eC42aj9tqZDjXxXbIEinHjot0yBrgZPUXcoBEaKR3Yz0ayYboxvSPvK+o5zkji084OhcpGDVgUiub/JoTG9lSMhbHoRrR6Km4vgB1+LU/fnqj+zKpA12JXaYKXB7DzWFZmaCkBhbuHQiJagUVoYGs3pJxDOp0M=
