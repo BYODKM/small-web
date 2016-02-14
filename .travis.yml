@@ -10,11 +10,9 @@ branches:
 script:
   - npm run travis
 before_install:
-  - eval "$(ssh-agent -s)"
   - openssl aes-256-cbc -K $encrypted_ade2291dba2d_key -iv $encrypted_ade2291dba2d_iv -in deploy_key.enc -out deploy.key -d
   - cp deploy.key ~/.ssh/
   - chmod 600 ~/.ssh/deploy.key
-  - ssh-add ~/.ssh/deploy.key
   - echo -e "Host github.com\n\tStrictHostKeyChecking no\nIdentityFile ~/.ssh/deploy.key\n" >> ~/.ssh/config
 after_success:
   - rm .gitignore && cp gh-pages.ignore .gitignore
@@ -24,7 +22,7 @@ after_success:
   - git commit -m "Add dist"
   - git remote set-url origin git@github.com:internets-inc/small-web.git
   - git remote -v
-  - git push -qf origin master:gh-pages
+  - git push -f origin master:gh-pages
 notifications:
   email:
     - hello@internets.co.jp
