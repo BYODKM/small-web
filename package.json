@@ -5,7 +5,7 @@
   "description": "Small Code for the Larger Site",
   "scripts": {
     "start": "gulp bower && gulp sprite && gulp serve",
-    "bower": "gulp bower",
+    "travis": "gulp bower && gulp sprite && gulp build",
     "sprite": "gulp sprite && gulp stylus",
     "build": "gulp build",
     "watch": "gulp watch",
