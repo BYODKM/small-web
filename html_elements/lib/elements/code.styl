@@ -10,3 +10,19 @@
     font-family monospace
     font-size small
     background-color whitesmoke
+
+  :root pre &
+    position static
+    display block
+    padding 1em
+    overflow-x scroll
+    line-height x-wide
+    word-wrap normal
+
+    &:before
+      content attr(data-lang)
+      absolute 0 0 null null
+      border-radius 0 4px 0 4px
+      padding 0 1em
+      color white
+      background-color silver
