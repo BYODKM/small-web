@@ -1,9 +1,10 @@
 .switch
+  $r = 1em
 
   :root &
     position relative
     display inline-block
-    border-radius 1em
+    border-radius $r
     size 4em 2em
     overflow hidden
     line-height 2em
@@ -15,6 +16,7 @@
     display block
     size 100%
     background-color silver
+    transition 0.1s
 
   & &__bar
     absolute 0 null null 0
@@ -22,7 +24,7 @@
     display block
     box-sizing border-box
     border 3px solid transparent
-    border-radius 1em
+    border-radius $r
     size 2em
     background-color white
     background-clip padding-box
@@ -36,6 +38,8 @@
     opacity 0
     cursor pointer
 
+  & &__self:checked + &__box
+    background-color gray
+
   & &__self:checked + &__box &__bar
     left 2em
-    background-color dimgray

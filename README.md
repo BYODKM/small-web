@@ -20,7 +20,7 @@ This is yet another static site generator.
 - Compile to CSS by [Stylus](https://github.com/learnboost/stylus)
 - Compile to JS by [CoffeeScript](https://github.com/jashkenas/coffeescript) (optional)
 - Built in Image Sprites generator
-- Built in web server & LiveReload
+- Built in local server & LiveReload
 - Bundle JS files by [Browserify](https://github.com/substack/node-browserify)
 - [Vue.js](https://github.com/vuejs/vue) loaded
 - Auto Vendor Prefixing by [kouto-swiss](https://github.com/leny/kouto-swiss)
