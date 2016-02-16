@@ -2,7 +2,7 @@ mixin hx
 
   //-
     - Usage1: +hx
-    - Usage2: +hx(level="2")
+    - Usage2: +hx(x="2")
 
   -
     hx = hx || 0
@@ -11,12 +11,12 @@ mixin hx
     if (hx > 6)
       hx = 6
   
-    if (attributes.level && attributes.level.length)
-      hx = attributes.level * 1
+    if (attributes.x && attributes.x.length)
+      hx = attributes.x * 1
 
     var tag = 'h' + hx
 
-    attributes.level = null
+    attributes.x = null
 
   #{tag}&attributes(attributes)
     block

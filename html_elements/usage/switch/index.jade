@@ -9,18 +9,11 @@ include /html_elements/lib/main
   +body
     +page
       .page__gutter
-        p.u-line--2
-          span.div.u-clear--fix
-            +switch.u-float--right
-            code.code +switch
-        hr.hr
-        p.u-line--2
-          label.label.label--block
-            +switch.u-float--right
-            code.code label > +switch
-        hr.hr
-        p.u-line--2
-          label.label.label--block
-            +switch(checked="true").u-float--right
-            code.code label > +switch(checked="true")
-        hr.hr
+        p
+          code.code +switch
+        p
+          +switch
+        p
+          code.code +switch(checked="true")
+        p
+          +switch(checked="true")

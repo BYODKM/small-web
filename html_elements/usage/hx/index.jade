@@ -18,12 +18,7 @@ include /html_elements/lib/main
         +hx +hx
         +hx +hx
         ul
-          li
-            +hx(level="2") +hx(level="2")
-            +hx +hx
-          li
-            +hx(level="2") +hx(level="2")
-            +hx +hx
-          li
-            +hx(level="2") +hx(level="2")
-            +hx +hx
+          each cycle in [1, 2, 3]
+            li
+              +hx(x="2") +hx(x="2")
+              +hx +hx
