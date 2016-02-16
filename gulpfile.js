@@ -246,7 +246,7 @@ const bundle = (pkg) => {
 };
 
 gulp.task('build', ['stylus', 'jade', 'coffee'], () => {
-  bundle.bind(null, bundler());
+  bundle.bind(null, bundler())();
 });
 
 gulp.task('watch', ['watch-stylus', 'watch-jade', 'watch-coffee'], () => {
