@@ -1,28 +1,10 @@
--
-  var $ = 'breadcrumbs'
-  var the
-  var Breadcrumbs = {
-    items: [
-      {
-        text: 'Home',
-        href: '/'
-      },{
-        text: 'foo',
-        href: '/foo/'
-      },{
-        text: 'bar',
-        href: false
-      }
-    ]
-  }
-  breadcrumbs ? the = breadcrumbs : the = Breadcrumbs
-
-if the.items.length
+if breadcrumbs && breadcrumbs.items.length
+  - var $ = 'breadcrumbs'
   div(class="#{$}")
-    ul(class="#{$}__items div")
-      each item, index in the.items
-        li(class="#{$}__item div")
+    ul.div(class="#{$}__items")
+      each item, index in breadcrumbs.items
+        li.div(class="#{$}__item")
           if item.href
-            a(href=item.href class="#{(index===0) ? $+'__icon a' : ''}")=item.text
+            a(href=item.href class="#{(!index) ? $+'__icon a' : ''}")=item.text
           else
             | #{item.text}

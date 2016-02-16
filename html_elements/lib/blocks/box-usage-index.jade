@@ -1,42 +1,17 @@
--
-  var $ = 'box-usage-index'
-  var the
-  var BoxUsageIndex = {
-    groups: [
-      {
-        label: 'blocks',
-        items: [
-          'breadcrumbs'
-        ]
-      },{
-        label: 'elements',
-        items: [
-          'button',
-          'icon',
-          'sprite'
-        ]
-      },{
-        label: 'scripts',
-        items: [
-          'smooth-scroll'
-        ]
-      }
-    ]
-  }
-  boxUsageIndex ? the = boxUsageIndex : the = BoxUsageIndex
-
-div(class="#{$}")
-  h1.div(class="#{$}__title")
-    a(href="https://github.com/internets-inc/small-web" target="_blank" class="#{$}__github")
-      +icon(name="ion-social-github")
-    | Usage
-  each group in the.groups
-    dl.div(class="#{$}__group")
-      dt.div(class="#{$}__label")=group.label
-      each item in group.items
-        dd.div(class="#{$}__item")
-          p.div(class="#{$}__demo")
-            a.a(href="./#{item}/" class="#{$}__link")=item
-          p.div(class="#{$}__code")
-            a.a(href="./#{item}/index.jade")
-              code.code Code
+if boxUsageIndex
+  - var $ = 'box-usage-index'
+  div(class="#{$}")
+    header.div(class="#{$}__title")
+      a.a(href="https://github.com/internets-inc/small-web" target="_blank" class="#{$}__github")
+        +icon(name="ion-social-github")
+      h1.div Usage
+    each group in boxUsageIndex.groups
+      dl.div(class="#{$}__group")
+        dt.div(class="#{$}__label")=group.label
+        each item in group.items
+          dd.div(class="#{$}__item")
+            p.div(class="#{$}__demo")
+              a.a(href="./#{item}/" class="#{$}__link")=item
+            p.div(class="#{$}__code")
+              a.a(href="./#{item}/index.jade")
+                code.code Code

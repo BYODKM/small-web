@@ -13,12 +13,16 @@ include /html_elements/lib/main
           label
             input(type="checkbox")
             +space
-            | A: input type="checkbox"
+            | A:
+            +space
+            code.code input(type="checkbox")
         p
           label
             +checkbox
             +space
-            | B: +checkbox
+            | B:
+            +space
+            code.code +checkbox
         p
           +checkbox
           +space
