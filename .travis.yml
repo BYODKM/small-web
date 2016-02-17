@@ -14,8 +14,8 @@ before_install:
   - cp deploy.key ~/.ssh/
   - chmod 600 ~/.ssh/deploy.key
   - echo -e "Host github.com\n\tStrictHostKeyChecking no\nIdentityFile ~/.ssh/deploy.key\n" >> ~/.ssh/config
-after_success:
   - rm .gitignore && cp gh-pages.ignore .gitignore
+after_success:
   - git config user.name "TRAVIS"
   - git config user.email "hello@internets.co.jp"
   - git remote set-url origin git@github.com:internets-inc/small-web.git
