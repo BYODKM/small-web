@@ -1,14 +1,15 @@
 .editorconfig
 .gitignore
 .travis.yml
-*.jade
 bower_components
 bower.json
 deploy_git.ignore
 deploy_key.enc
 deploy.key
+foo/*.jade
 gulpfile.js
 html_elements/lib
+index.jade
 node_modules
 npm-debug.log
 package.json
