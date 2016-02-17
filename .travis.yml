@@ -19,8 +19,7 @@ after_success:
   - git config user.name "TRAVIS"
   - git config user.email "hello@internets.co.jp"
   - git remote set-url origin git@github.com:internets-inc/small-web.git
-  - git remote -v
-  - git checkout -b gh-pages
+  - git checkout --orphan gh-pages
   - git add -A
   - git commit -m "Add dist"
   - git push -f origin gh-pages

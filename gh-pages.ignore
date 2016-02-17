@@ -1,4 +1,15 @@
+.editorconfig
+.gitignore
+.travis.yml
+*.jade
 bower_components
+bower.json
+deploy_key.enc
 deploy.key
+gh-pages.ignore
+gulpfile.js
+html_elements/lib
 node_modules
 npm-debug.log
+package.json
+README.md
