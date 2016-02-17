@@ -1,5 +1,6 @@
 *.html
 bower_components
+deploy.key
 html_elements/bundle-*.png
 html_elements/bundle.*
 html_elements/lib/sprites/*.styl
