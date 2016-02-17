@@ -26,12 +26,12 @@ This is yet another static site generator.
 - Bundle JS files by [Browserify](https://github.com/substack/node-browserify).
 - [Vue.js](https://github.com/vuejs/vue) is included.
 - Auto Vendor Prefixing by [kouto-swiss](https://github.com/leny/kouto-swiss).
-- Built in Image Sprites generator.
-- Built in Style Guide generator.
+- Built in [Image Sprites](https://github.com/internets-inc/small-web/blob/master/html_elements/lib/sprites/README.md) generator.
+- Built in [Style Guide](http://internets-inc.github.io/small-web/html_elements/usage/) generator.
 - Built in local server & LiveReload.
 - Publish [pure dist](https://github.com/internets-inc/small-web/tree/gh-pages) to GitHub Pages by [Travis-CI](https://travis-ci.org/internets-inc/small-web).
 - [Atomic Design](http://patternlab.io/about.html) accelerated by Jade mixins.
-- Ultra thin reset css ([almost nothing](./html_elements/lib/prepend/default.styl)).
+- Ultra thin reset css ([almost nothing](https://github.com/internets-inc/small-web/blob/master/html_elements/lib/prepend/default.styl)).
 - Advanced non-destructive reset.css methodology by [morph.css](https://github.com/internets-inc/morph.css).
 
 ## Usage
