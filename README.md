@@ -13,23 +13,29 @@
 
 This is yet another static site generator.
 
-## Stacks
+## Requirements
 
-- [Node.js](https://nodejs.org/) is required
-- Compile to HTML by [Jade](https://github.com/pugjs/jade)
-- Compile to CSS by [Stylus](https://github.com/learnboost/stylus)
-- Compile to JS by [CoffeeScript](https://github.com/jashkenas/coffeescript) (optional)
-- Built in Image Sprites generator
-- Built in local server & LiveReload
-- Bundle JS files by [Browserify](https://github.com/substack/node-browserify)
-- [Vue.js](https://github.com/vuejs/vue) loaded
-- Auto Vendor Prefixing by [kouto-swiss](https://github.com/leny/kouto-swiss)
-- Ready for [GitHub Pages](https://pages.github.com)
-- And more...
+- [Node.js](https://nodejs.org/)
+
+## Features
+
+- Zero global install.
+- Compiling HTML by [Jade](https://github.com/pugjs/jade).
+- Compiling CSS by [Stylus](https://github.com/learnboost/stylus).
+- Compiling JS by [CoffeeScript](https://github.com/jashkenas/coffeescript) as optional.
+- Bundle JS files by [Browserify](https://github.com/substack/node-browserify).
+- [Vue.js](https://github.com/vuejs/vue) is included.
+- Auto Vendor Prefixing by [kouto-swiss](https://github.com/leny/kouto-swiss).
+- Built in Image Sprites generator.
+- Built in local server & LiveReload.
+- Publish pure dist to [GitHub Pages](https://github.com/internets-inc/small-web/tree/gh-pages).
+- Atomic Design accelerated by Jade mixins.
+- Ultra thin reset css (almost nothing).
+- Advanced non-destructive reset.css methodology by [morph.css](https://github.com/internets-inc/morph.css).
 
 ## Usage
 
-### Init
+### Initial
 
 ```
 $ git clone https://github.com/internets-inc/small-web.git
