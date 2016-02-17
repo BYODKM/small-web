@@ -9,7 +9,9 @@ include /html_elements/lib/main
   +body
     +page
       .page__gutter
+
         form
+
           dl
             dt
               label.label(for="input") .input
@@ -18,12 +20,14 @@ include /html_elements/lib/main
                 input.input#input(type="input" placeholder="placeholder" value="")
                 +space
                 button.button(type="button") .button
+
           dl
             dt
               label.label(for="password") password
             dd.div
               p
                 input.input#password(type="password" value="")
+
           dl
             dt
               label.label(for="select") +select
@@ -36,6 +40,7 @@ include /html_elements/lib/main
                   option(value="") jumps over a lazy dog
                 +space
                 button.button(type="button") .button
+
           dl
             dt +radio
             dd.div
@@ -58,6 +63,7 @@ include /html_elements/lib/main
                       +radio(name="radio" value="")
                       +space
                       | Radio
+
           dl
             dt +checkbox
             dd.div
@@ -80,12 +86,14 @@ include /html_elements/lib/main
                       +checkbox(name="checkbox" value="")
                       +space
                       | Checkbox
+
           dl
             dt
               label.label(for="textarea") .textarea
             dd.div
               p
                 textarea.textarea#textarea(placeholder="placeholder" value="")
+
           p.u-text--center
             button.button(type="button") .button
             button.button(type="button") .button

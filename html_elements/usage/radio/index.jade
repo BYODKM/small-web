@@ -9,6 +9,7 @@ include /html_elements/lib/main
   +body
     +page
       .page__gutter
+
         p
           label
             input(type="radio" name="radio")
@@ -16,6 +17,7 @@ include /html_elements/lib/main
             | A:
             +space
             code.code input(type="radio")
+
         p
           label
             +radio(name="radio")
@@ -23,6 +25,7 @@ include /html_elements/lib/main
             | B:
             +space
             code.code +radio
+
         p
           +radio(name="radio")
           +space
