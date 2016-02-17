@@ -27,6 +27,7 @@ This is yet another static site generator.
 - [Vue.js](https://github.com/vuejs/vue) is included.
 - Auto Vendor Prefixing by [kouto-swiss](https://github.com/leny/kouto-swiss).
 - Built in Image Sprites generator.
+- Built in Style Guide generator.
 - Built in local server & LiveReload.
 - Publish pure dist to [GitHub Pages](https://github.com/internets-inc/small-web/tree/gh-pages).
 - Atomic Design accelerated by Jade mixins.
