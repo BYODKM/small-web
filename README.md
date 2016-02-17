@@ -29,9 +29,9 @@ This is yet another static site generator.
 - Built in Image Sprites generator.
 - Built in Style Guide generator.
 - Built in local server & LiveReload.
-- Publish pure dist to [GitHub Pages](https://github.com/internets-inc/small-web/tree/gh-pages).
-- Atomic Design accelerated by Jade mixins.
-- Ultra thin reset css (almost nothing).
+- Publish [pure dist](https://github.com/internets-inc/small-web/tree/gh-pages) to GitHub Pages by [Travis-CI](https://travis-ci.org/internets-inc/small-web).
+- [Atomic Design](http://patternlab.io/about.html) accelerated by Jade mixins.
+- Ultra thin reset css ([almost nothing](./html_elements/lib/prepend/default.styl)).
 - Advanced non-destructive reset.css methodology by [morph.css](https://github.com/internets-inc/morph.css).
 
 ## Usage
