@@ -1,4 +1,5 @@
 .editorconfig
+.gitignore
 .travis.yml
 *.jade
 bower_components
