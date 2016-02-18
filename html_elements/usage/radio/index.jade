@@ -13,21 +13,27 @@ include /html_elements/lib/main
         p
           label
             input(type="radio" name="radio")
-            +space
+
+            +_
             | A:
-            +space
-            code.code input(type="radio")
+            +_
+            code.code
+              | input(type="radio")
 
         p
           label
             +radio(name="radio")
-            +space
+
+            +_
             | B:
-            +space
-            code.code +radio
+            +_
+            code.code
+              | +radio
 
         p
           +radio(name="radio")
-          +space
+
+          +_
           | C: Without 
-          code.code label
+          code.code
+            | label

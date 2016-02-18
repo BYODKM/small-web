@@ -11,7 +11,8 @@ include /html_elements/lib/main
       .page__gutter
 
         p
-          code.code code.code
+          code.code
+            | code.code
 
         pre
           code.code
@@ -24,5 +25,5 @@ include /html_elements/lib/main
         pre
           code.code(data-lang="coffee-script")
             | if items.length
-            |   for item in items by -1
+            |   for item in items
             |     item.classList.add('is-current') if isCurrent(item)

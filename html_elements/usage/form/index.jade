@@ -14,23 +14,27 @@ include /html_elements/lib/main
 
           dl
             dt
-              label.label(for="input") .input
+              label.label(for="input")
+                | .input
             dd.div
               p
                 input.input#input(type="input" placeholder="placeholder" value="")
-                +space
-                button.button(type="button") .button
+                +_
+                button.button(type="button")
+                  | .button
 
           dl
             dt
-              label.label(for="password") password
+              label.label(for="password")
+                | password
             dd.div
               p
                 input.input#password(type="password" value="")
 
           dl
             dt
-              label.label(for="select") +select
+              label.label(for="select")
+                | +select
             dd.div
               p
                 +select#select
@@ -38,62 +42,68 @@ include /html_elements/lib/main
                   option(value="") The quick
                   option(value="") brown fox
                   option(value="") jumps over a lazy dog
-                +space
-                button.button(type="button") .button
+                +_
+                button.button(type="button")
+                  | .button
 
           dl
-            dt +radio
+            dt
+              | +radio
             dd.div
               ul.ul.ul--narrow-gutter.u-margin--tb-1em
                 li.div
                   p
                     label.label
                       +radio(name="radio" value="")
-                      +space
+                      +_
                       | Radio
                 li.div
                   p
                     label.label
                       +radio(name="radio" value="")
-                      +space
+                      +_
                       | Radio
                 li.div
                   p
                     label.label
                       +radio(name="radio" value="")
-                      +space
+                      +_
                       | Radio
 
           dl
-            dt +checkbox
+            dt
+              | +checkbox
             dd.div
               ul.ul.ul--narrow-gutter.u-margin--tb-1em
                 li.div
                   p
                     label.label
                       +checkbox(name="checkbox" value="")
-                      +space
+                      +_
                       | Checkbox
                 li.div
                   p
                     label.label
                       +checkbox(name="checkbox" value="")
-                      +space
+                      +_
                       | Checkbox
                 li.div
                   p
                     label.label
                       +checkbox(name="checkbox" value="")
-                      +space
+                      +_
                       | Checkbox
 
           dl
             dt
-              label.label(for="textarea") .textarea
+              label.label(for="textarea")
+                | .textarea
             dd.div
               p
                 textarea.textarea#textarea(placeholder="placeholder" value="")
 
           p.u-text--center
-            button.button(type="button") .button
-            button.button(type="button") .button
+            button.button(type="button")
+              | .button
+            button.button(type="button")
+              | .button
