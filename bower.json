@@ -2,6 +2,6 @@
   "name": "small-web",
   "private": true,
   "dependencies": {
-    "morph.css": "~1.2.0"
+    "morph.css": "~1.2.1"
   }
 }
