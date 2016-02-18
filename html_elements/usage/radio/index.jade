@@ -31,9 +31,19 @@ include /html_elements/lib/main
               | +radio
 
         p
+          label
+            +radio(name="radio" checked="true")
+
+            +_
+            | C:
+            +_
+            code.code
+              | +radio(checked="true")
+
+        p
           +radio(name="radio")
 
           +_
-          | C: Without 
+          | D: Without 
           code.code
             | label

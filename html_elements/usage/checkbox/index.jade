@@ -31,9 +31,19 @@ include /html_elements/lib/main
               | +checkbox
 
         p
+          label
+            +checkbox(checked="true")
+
+            +_
+            | C:
+            +_
+            code.code
+              | +checkbox(checked="true")
+
+        p
           +checkbox
 
           +_
-          | C: Without 
+          | D: Without 
           code.code
             | label
