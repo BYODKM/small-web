@@ -1,0 +1,36 @@
+include /html_elements/lib/main
+
+-
+  var title = '.row | Usage'
+
++html
+  +head
+    +title
+  +body
+    +page
+      .page__gutter
+
+        h1
+          | .row
+
+        .row
+          .row__col
+            code.code
+              | .row__col
+          .row__col
+            code.code
+              | .row__col
+
+        h2
+          | 3 columns
+
+        .row
+          .row__col
+            code.code
+              | .row__col
+          .row__col
+            code.code
+              | .row__col
+          .row__col
+            code.code
+              | .row__col
