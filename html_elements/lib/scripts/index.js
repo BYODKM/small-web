@@ -5,4 +5,4 @@ require('./placeholder-polyfill');
 require('./smooth-scroll');
 require('./touch-start');
 // require('./utils');
-// Don't require utils here.
+// Do not require utils here.
