@@ -2,8 +2,5 @@
 
   for value in top middle bottom
 
-    :root &-{value}
-      vertical-align value
-
-    :root &-{value}&-{value}--important
+    :root &-{value}:not(:root)
       vertical-align value

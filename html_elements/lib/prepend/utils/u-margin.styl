@@ -2,28 +2,15 @@
 
   for value in "0" "1em" "1rem"
 
-    :root &-{value}
+    :root &-{value}:not(:root)
       margin unquote(value)
 
-    :root &-{value}&-{value}--important
-      margin unquote(value)
-
-    :root &-t-{value}
+    :root &-t-{value}:not(:root)
       margin-top unquote(value)
 
-    :root &-t-{value}&-t-{value}--important
-      margin-top unquote(value)
-
-    :root &-b-{value}
+    :root &-b-{value}:not(:root)
       margin-bottom unquote(value)
 
-    :root &-b-{value}&-b-{value}--important
-      margin-bottom unquote(value)
-
-    :root &-tb-{value}
-      margin-top unquote(value)
-      margin-bottom unquote(value)
-
-    :root &-tb-{value}&-tb-{value}--important
+    :root &-tb-{value}:not(:root)
       margin-top unquote(value)
       margin-bottom unquote(value)

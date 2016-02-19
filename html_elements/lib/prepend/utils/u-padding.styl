@@ -1,17 +1,10 @@
 .u-padding
 
-  for value in "1em"
+  for value in "1em" "10px"
 
-    :root &-{value}
+    :root &-{value}:not(:root)
       padding unquote(value)
 
-    :root &-{value}&-{value}--important
-      padding unquote(value)
-
-    :root &-tb-{value}
-      padding-top unquote(value)
-      padding-bottom unquote(value)
-
-    :root &-tb-{value}&-tb-{value}--important
+    :root &-tb-{value}:not(:root)
       padding-top unquote(value)
       padding-bottom unquote(value)

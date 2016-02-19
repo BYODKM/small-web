@@ -2,8 +2,5 @@
 
   for value in left right
 
-    :root &-{value}
-      float value
-
-    :root &-{value}&-{value}--important
+    :root &-{value}:not(:root)
       float value

@@ -2,8 +2,5 @@
 
   for value in both fix
 
-    :root &-{value}
-      clear value
-
-    :root &-{value}&-{value}--important
+    :root &-{value}:not(:root)
       clear value

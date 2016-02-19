@@ -2,8 +2,5 @@
 
   for value in left center right
 
-    :root &-{value}
-      text-align value
-
-    :root &-{value}&-{value}--important
+    :root &-{value}:not(:root)
       text-align value
