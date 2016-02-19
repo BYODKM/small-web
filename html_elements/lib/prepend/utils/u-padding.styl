@@ -1,0 +1,17 @@
+.u-padding
+
+  for value in "1em"
+
+    :root &-{value}
+      padding unquote(value)
+
+    :root &-{value}&-{value}--important
+      padding unquote(value)
+
+    :root &-tb-{value}
+      padding-top unquote(value)
+      padding-bottom unquote(value)
+
+    :root &-tb-{value}&-tb-{value}--important
+      padding-top unquote(value)
+      padding-bottom unquote(value)

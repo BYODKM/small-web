@@ -33,11 +33,10 @@ include /html_elements/lib/main
 
           dl
             dt
-              label.label(for="select")
-                | +select
+              | +select
             dd.div
               p
-                +select#select
+                +select
                   option(value="") option
                   option(value="") The quick
                   option(value="") brown fox
@@ -50,7 +49,7 @@ include /html_elements/lib/main
             dt
               | +radio
             dd.div
-              ul.ul.ul--narrow-gutter.u-margin--tb-1em
+              ul.ul.ul--narrow-gutter.u-margin-tb-1em
                 li.div
                   p
                     label.label
@@ -74,7 +73,7 @@ include /html_elements/lib/main
             dt
               | +checkbox
             dd.div
-              ul.ul.ul--narrow-gutter.u-margin--tb-1em
+              ul.ul.ul--narrow-gutter.u-margin-tb-1em
                 li.div
                   p
                     label.label
@@ -102,7 +101,7 @@ include /html_elements/lib/main
               p
                 textarea.textarea#textarea(placeholder="placeholder" value="")
 
-          p.u-text--center
+          p.u-text-center
             button.button(type="button")
               | .button
             button.button(type="button")

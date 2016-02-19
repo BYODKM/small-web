@@ -1,0 +1,29 @@
+.u-margin
+
+  for value in "0" "1em" "1rem"
+
+    :root &-{value}
+      margin unquote(value)
+
+    :root &-{value}&-{value}--important
+      margin unquote(value)
+
+    :root &-t-{value}
+      margin-top unquote(value)
+
+    :root &-t-{value}&-t-{value}--important
+      margin-top unquote(value)
+
+    :root &-b-{value}
+      margin-bottom unquote(value)
+
+    :root &-b-{value}&-b-{value}--important
+      margin-bottom unquote(value)
+
+    :root &-tb-{value}
+      margin-top unquote(value)
+      margin-bottom unquote(value)
+
+    :root &-tb-{value}&-tb-{value}--important
+      margin-top unquote(value)
+      margin-bottom unquote(value)

@@ -1,0 +1,33 @@
+.u-line
+
+  for value in "1" "2"
+
+    :root &-{value}
+      line-height unquote(value)
+
+    :root &-{value}&-{value}--important
+      line-height unquote(value)
+
+  :root &-narrow
+    line-height narrow
+
+  :root &-narrow&-narrow--important
+    line-height narrow
+
+  :root &-wide
+    line-height wide
+
+  :root &-wide&-wide--important
+    line-height wide
+
+  :root &-xwide
+    line-height x-wide
+
+  :root &-xwide&-xwide--important
+    line-height x-wide
+
+  :root &-xxwide
+    line-height xx-wide
+
+  :root &-xxwide&-xxwide--important
+    line-height xx-wide
