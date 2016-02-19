@@ -26,16 +26,15 @@ include /html_elements/lib/main
 
         hr.hr
 
-        p.div.u-padding-tb-10px
-          label.label.row
-
-            span.row__col.u-vertical-middle
-              | With
-              +_
-              code.code
-                | label
-
-            span.row__col.u-text-right
-              +switch
+        p.div
+          label.label.label--block
+            span.row
+              span.row__col.row__col--strong.u-padding-tb-10px.u-vertical-middle
+                | With
+                +_
+                code.code
+                  | label
+              span.row__col.row__col--weak.u-padding-tb-10px.u-text-right
+                +switch
 
         hr.hr
