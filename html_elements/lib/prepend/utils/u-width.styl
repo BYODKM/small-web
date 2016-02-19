@@ -1,0 +1,18 @@
+.u-width
+
+  :root &-full:not(:root)
+    width 100%
+
+  :root &-half:not(:root)
+    width 50%
+
+  :root &-third:not(:root)
+    width 33%
+
+  :root &-quarter:not(:root)
+    width 25%
+
+  for value in "200px"
+
+    :root &-{value}:not(:root)
+      width unquote(value)
