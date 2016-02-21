@@ -17,7 +17,7 @@ This is yet another static site generator.
 
 - [Node.js](https://nodejs.org/)
 
-## Features
+## 15 Features
 
 - Zero global install.
 - Compiling HTML by [Jade](https://github.com/pugjs/jade).
@@ -31,7 +31,7 @@ This is yet another static site generator.
 - Auto Vendor Prefixing by [kouto-swiss](https://github.com/leny/kouto-swiss).
 - Auto publish [pure dist](https://github.com/internets-inc/small-web/tree/gh-pages) to the GitHub Pages by [Travis-CI](https://travis-ci.org/internets-inc/small-web).
 - The yields is not required web-root.
-- [Atomic Design](http://patternlab.io/about.html) made with Jade mixins.
+- Archived [Atomic Design](http://patternlab.io/about.html) with Jade mixins.
 - Ultra thin reset css ([almost nothing](https://github.com/internets-inc/small-web/blob/master/html_elements/lib/prepend/default.styl)).
 - Advanced non-destructive reset.css methodology by [morph.css](https://github.com/internets-inc/morph.css).
 
