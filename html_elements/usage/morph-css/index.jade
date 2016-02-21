@@ -12,10 +12,13 @@ include /html_elements/lib/main
         
         h1 morph.css
 
+        h2
+          | .div
+
         ul
           li
             code.code
-              | li
+              | ul li
           li
             code.code
               | li
@@ -23,26 +26,46 @@ include /html_elements/lib/main
             code.code
               | li
 
-          li.div
-            code.code
-              | li.div
-          li.div
-            code.code
-              | li.div
-          li.div
-            code.code
-              | li.div
+            ul.div
+              li.div
+                code.code
+                  | ul.div li.div
+              li.div
+                code.code
+                  | li.div
+              li.div
+                code.code
+                  | li.div
 
-            ul
-              li
-                code.code
-                  | li
-              li
-                code.code
-                  | li
-              li
-                code.code
-                  | li
+                ul
+                  li
+                    code.code
+                      | ul li
+                  li
+                    code.code
+                      | li
+                  li
+                    code.code
+                      | li
+
+        h2
+          | .span
+
+        dl
+          dt
+            code.code
+              | dt
+          dd
+            code.code
+              | dd
+
+        dl
+          dt.span
+            code.code
+              | dt.span
+          dd.span
+            code.code
+              | dd.span
 
         p
           a.button.button--link(href="https://github.com/internets-inc/morph.css" target="_blank")
