@@ -13,6 +13,12 @@
 
 This is yet another static site generator.
 
+## Our Goal is
+
+- We offer not only Developers but also Designers and Directors to write a code easily.
+- We offer safe and non-destructive front-end development environment for a large site.
+- We push our users to write a code more semantically and SEO friendly.
+
 ## Requirements
 
 - [Node.js](https://nodejs.org/)
@@ -31,9 +37,16 @@ This is yet another static site generator.
 - Auto Vendor Prefixing by [kouto-swiss](https://github.com/leny/kouto-swiss).
 - Auto publish [pure dist](https://github.com/internets-inc/small-web/tree/gh-pages) to the GitHub Pages by [Travis-CI](https://travis-ci.org/internets-inc/small-web).
 - The yields is not required web-root.
-- Archived [Atomic Design](http://patternlab.io/about.html) with Jade mixins.
+- Archive [Atomic Design](http://patternlab.io/about.html) with Jade mixins.
 - Ultra thin reset css ([almost nothing](https://github.com/internets-inc/small-web/blob/master/html_elements/lib/prepend/default.styl)).
 - Advanced non-destructive reset.css methodology by [morph.css](https://github.com/internets-inc/morph.css).
+
+## Target Browsers
+
+- IE 9+
+- Android 4+
+- iOS 7+
+- Others (last 2 versions)
 
 ## Usage
 
@@ -60,18 +73,11 @@ $ npm run sprite
 
 [README.md](./html_elements/lib/sprites/README.md)
 
-## Target Browsers
-
-- IE 9+
-- Android 4+
-- iOS 7+
-- Others (last 2 versions)
-
 ## License
 
 MIT
 
-## Acknowledgements
+### Acknowledgements
 
 This application makes use of the following third party libraries:
 
