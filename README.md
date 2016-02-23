@@ -15,9 +15,9 @@ This is yet another static site generator.
 
 ## Our Goal is
 
-- We offer not only Developers but also Designers and Directors to write a code easily.
-- We offer safe and non-destructive front-end development environment for a large site.
-- We push our users to write a code more semantically and SEO friendly.
+- To make a small and safe front-end development environment for a large site.
+- To offer not only Developers but also Designers and Directors to write a code easily.
+- To push our users to write a code more semantically and SEO friendly.
 
 ## Requirements
 
