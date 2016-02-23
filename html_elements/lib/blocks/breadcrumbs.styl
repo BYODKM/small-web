@@ -15,16 +15,18 @@
 
     &:before
       content "/"
-      padding 0 0.6em
+      display inline-block
+      margin 0 0.6em
       color silver
 
-    &:first-child
-      size 1em
+  & &__item--icon
+    size 1em
 
-      &:before
-        display none
+    &:before
+      display none
 
   & &__icon
+    link-tint-style()
     absolute -0.1em null null 0
     width 1em
     overflow hidden

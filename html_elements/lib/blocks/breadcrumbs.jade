@@ -3,8 +3,12 @@ if breadcrumbs && breadcrumbs.items.length
   div(class="#{$}")
     ul.div(class="#{$}__items")
       each item, index in breadcrumbs.items
-        li.div(class="#{$}__item")
-          if item.href
-            a(href=item.href class="#{(!index) ? $+'__icon a' : ''}")=item.text
-          else
+        if !index && item.href && item.href === '/'
+          li.div(class="#{$}__item #{$}__item--icon")
+            a(href=item.href class="#{$}__icon")=item.text
+        else if item.href
+          li.div(class="#{$}__item")
+            a(href=item.href)=item.text
+        else
+          li.div(class="#{$}__item")
             | #{item.text}
