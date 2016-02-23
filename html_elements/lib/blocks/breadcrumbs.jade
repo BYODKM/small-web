@@ -5,7 +5,7 @@ if breadcrumbs && breadcrumbs.items.length
       each item, index in breadcrumbs.items
         if !index && item.href && item.href === '/'
           li.div(class="#{$}__item #{$}__item--icon")
-            a(href=item.href class="#{$}__icon")=item.text
+            a(href=item.href class="#{$}__home")=item.text
         else if item.href
           li.div(class="#{$}__item")
             a(href=item.href)=item.text
