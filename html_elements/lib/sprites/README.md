@@ -21,12 +21,12 @@ $ npm run sprite
 
 ```
 // Jade
-+sprite(src="that@2x.png" alt="")
++sprite(src="baz@2x.png" alt="")
 ```
 
 ```
 // Stylus
-sprite("that@2x.png")
+sprite("baz@2x.png")
 ```
 
 No need to write width, height even filepath in both cases.
