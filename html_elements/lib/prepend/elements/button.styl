@@ -21,9 +21,19 @@
     &:active
       outline none
 
+  & + &
+    margin-left 0.5em
+
   &&--link
     link-tint-style()
     border-color currentColor
 
-  & + &
-    margin-left 0.5em
+  &&--execute
+    border-color green
+    color white
+    background-color green
+
+  &&--danger
+    border-color red
+    color white
+    background-color red
