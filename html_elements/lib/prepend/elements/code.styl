@@ -1,6 +1,6 @@
 .code
 
-  :root &
+  &:not(:root)
     position relative
     top -1px
     box-sizing border-box
@@ -11,7 +11,7 @@
     font-size small
     background-color whitesmoke
 
-  :root pre &
+  pre &:not(:root)
     position static
     display block
     padding 1.25em

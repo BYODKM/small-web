@@ -1,8 +1,8 @@
 ol-ul-style()
 
-  :root &
+  &:not(:root)
     margin 0
     padding 0
 
-    &--narrow-gutter
-      padding-left 1em
+  &&--narrow-gutter
+    padding-left 1em

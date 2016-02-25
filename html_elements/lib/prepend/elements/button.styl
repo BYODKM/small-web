@@ -1,6 +1,6 @@
 .button
 
-  :root &
+  &:not(:root)
     display inline-block
     box-sizing border-box
     padding 0 0.75em
@@ -21,6 +21,9 @@
     &:active
       outline none
 
+    .no-touch &:hover
+      background-color whitesmoke
+
   & + &
     margin-left 0.5em
 
@@ -28,12 +31,21 @@
     link-tint-style()
     border-color currentColor
 
+    .no-touch &:hover
+      background-color lighten(blue, 90%)
+
   &&--execute
     border-color green
     color white
     background-color green
 
+    .no-touch &:hover
+      background-color lighten(green, 5%)
+
   &&--danger
     border-color red
     color white
     background-color red
+
+    .no-touch &:hover
+      background-color darken(red, 18%)
