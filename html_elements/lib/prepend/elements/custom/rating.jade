@@ -11,23 +11,30 @@ mixin rating
     var $ = 'rating'
     var value = 0
     var stars = 5
+    var readonly = false
     var name = 'rating-' + rating
 
     if (attributes.value && attributes.value.length)
-      value = attributes.value
+      value = Math.floor(attributes.value)
       attributes.value = null
-      value = Math.floor(value)
 
     if (attributes.stars && attributes.stars.length)
-      stars = attributes.stars
+      stars = Math.floor(attributes.stars)
       attributes.stars = null
-      stars = Math.floor(stars)
+
+    if (attributes.readonly && attributes.readonly.length)
+      if (attributes.readonly === 'true' || attributes.readonly === 'readonly')
+        readonly = true
+      attributes.readonly = null
 
     if (attributes.name && attributes.name.length)
       name = attributes.name
       attributes.name = null
 
-  span(class=$)&attributes(attributes)
+  span&attributes(attributes)(
+    class=$
+    class=((readonly) ? $+"--readonly" : "")
+    )
     - for (var index = 0; index <= stars; index++)
       input(
         type="radio"
@@ -39,10 +46,17 @@ mixin rating
         checked=((value === index) ? true : false)
         )
       | <span class="#{$}__segue">
-      label(
-        class="#{$}__label"
-        class=((!index) ? "#{$}__label--zero" : "")
-        for="#{name}-#{index}"
-        )
+      if !readonly
+        label(
+          class="#{$}__label"
+          class=((!index) ? "#{$}__label--zero" : "")
+          for="#{name}-#{index}"
+          )
+      else
+        span(
+          class="#{$}__label #{$}__label--span"
+          class=((!index) ? "#{$}__label--zero" : "")
+          for="#{name}-#{index}"
+          )
     - for (var i = 0; i <= stars; i++)
       | </span>

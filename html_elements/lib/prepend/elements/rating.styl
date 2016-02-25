@@ -12,24 +12,27 @@
   & &__input:checked + &__segue &__segue
     color silver
 
-    .no-touch &:hover
-      color gold
+  .no-touch &:not(&--readonly) &__input:checked + &__segue &__segue:hover
+    color gold
 
-  .no-touch &:hover &__segue
+  .no-touch &:not(&--readonly):hover &__segue
     color silver
 
-  .no-touch & &__segue:hover
+  .no-touch &:not(&--readonly) &__segue:hover
     color gold
 
   & &__label
     display inline-block
     cursor pointer
 
-    .no-touch &:active
-      color darken(gold, 10%)
+    &--span
+      cursor default
 
     &:before
       content "★"
 
     &--zero:before
       content "　"
+
+  .no-touch &:not(&--readonly) &__label:active
+    color darken(gold, 10%)

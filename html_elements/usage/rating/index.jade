@@ -24,7 +24,15 @@ include /html_elements/lib/main
         dl
           dt
             code.code
-              | +rating(stars="7" value="5")
+              | +rating(value="5" stars="7")
           dd.div
             p.u-font-large
-              +rating(stars="7" value="5")
+              +rating(value="5" stars="7")
+
+        dl
+          dt
+            code.code
+              | +rating(value="5" readonly="true")
+          dd.div
+            p.u-font-large
+              +rating(value="5" readonly="true")
