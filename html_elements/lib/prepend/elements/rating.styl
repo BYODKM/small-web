@@ -1,0 +1,35 @@
+.rating
+
+  :root &
+    cursor default
+
+  & &__input
+    display none
+
+  & &__segue
+    color gold
+
+  & &__input:checked + &__segue &__segue
+    color silver
+
+    .no-touch &:hover
+      color gold
+
+  .no-touch &:hover &__segue
+    color silver
+
+  .no-touch & &__segue:hover
+    color gold
+
+  & &__label
+    display inline-block
+    cursor pointer
+
+    .no-touch &:active
+      color darken(gold, 10%)
+
+    &:before
+      content "★"
+
+    &--zero:before
+      content "　"

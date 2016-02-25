@@ -1,0 +1,48 @@
+mixin rating
+
+  //-
+    - Usage: +rating(value="5" stars="6")
+    - Yield: COMPLICATED
+
+  -
+    rating = rating || 0
+    rating += 1
+
+    var $ = 'rating'
+    var value = 0
+    var stars = 5
+    var name = 'rating-' + rating
+
+    if (attributes.value && attributes.value.length)
+      value = attributes.value
+      attributes.value = null
+      value = Math.floor(value)
+
+    if (attributes.stars && attributes.stars.length)
+      stars = attributes.stars
+      attributes.stars = null
+      stars = Math.floor(stars)
+
+    if (attributes.name && attributes.name.length)
+      name = attributes.name
+      attributes.name = null
+
+  span(class=$)&attributes(attributes)
+    - for (var index = 0; index <= stars; index++)
+      input(
+        type="radio"
+        class="#{$}__input"
+        name=name
+        id="#{name}-#{index}"
+        value=index
+        autocomplete="off"
+        checked=((value === index) ? true : false)
+        )
+      | <span class="#{$}__segue">
+      label(
+        class="#{$}__label"
+        class=((!index) ? "#{$}__label--zero" : "")
+        for="#{name}-#{index}"
+        )
+    - for (var i = 0; i <= stars; i++)
+      | </span>

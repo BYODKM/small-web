@@ -1,0 +1,30 @@
+include /html_elements/lib/main
+
+-
+  var title = 'rating | Usage'
+
++html
+  +head
+    +title
+  +body
+    +page
+      .page__gutter
+
+        h1
+          | rating
+
+        dl
+          dt
+            code.code
+              | +rating
+          dd.div
+            p.u-font-large
+              +rating
+
+        dl
+          dt
+            code.code
+              | +rating(stars="7" value="5")
+          dd.div
+            p.u-font-large
+              +rating(stars="7" value="5")
