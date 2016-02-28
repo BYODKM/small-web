@@ -1,11 +1,11 @@
 {
   "name": "small-web",
-  "version": "1.0.5",
+  "version": "1.0.11",
   "private": true,
   "description": "Small Code for the Larger Site",
   "scripts": {
-    "start": "gulp bower && gulp sprite && gulp serve",
-    "travis": "gulp bower && gulp sprite && gulp build",
+    "start": "gulp sprite && gulp serve",
+    "travis": "gulp sprite && gulp build",
     "sprite": "gulp sprite && gulp stylus",
     "build": "gulp build",
     "watch": "gulp watch",
@@ -54,6 +54,7 @@
     "jstransformer-stylus": "~1.0.0",
     "kouto-swiss": "~0.11.14",
     "merge-stream": "~1.0.0",
+    "morph.css": "~1.2.2",
     "run-sequence": "~1.1.5",
     "vinyl-buffer": "~1.0.0",
     "vinyl-source-stream": "~1.1.0",

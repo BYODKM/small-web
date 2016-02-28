@@ -4,7 +4,6 @@ const gulp = require('gulp');
 
 const browserify = require('browserify');
 const browserSync = require('browser-sync').create();
-const debowerify = require('debowerify');
 const del = require('del');
 const fs = require('fs');
 const jade = require('jade');
@@ -15,7 +14,6 @@ const vinylStream = require('vinyl-source-stream');
 const watchify = require('watchify');
 
 const $ = {
-  bower: require('gulp-bower'),
   coffee: require('gulp-coffee'),
   cssmin: require('gulp-cssmin'),
   data: require('gulp-data'),
@@ -62,8 +60,7 @@ const config = {
   browserify: {
     cache: {},
     packageCache: {},
-    entries: ['./html_elements/lib/scripts/index.js'],
-    transform: ['debowerify']
+    entries: ['./html_elements/lib/scripts/index.js']
   },
   uglify: {
     compress: true,
@@ -96,14 +93,6 @@ const config = {
     stream: true
   }
 };
-
-gulp.task('clean-bower', (done) => {
-  return del(['./bower_components/'], done);
-});
-
-gulp.task('bower', ['clean-bower'], () => {
-  return $.bower();
-});
 
 gulp.task('stylus', () => {
   return gulp.src('./html_elements/lib/main.styl')
@@ -169,7 +158,7 @@ gulp.task('jade', () => {
       './**/*.jade',
       '!./**/_*.jade',
       '!./html_elements/lib/**/*.jade',
-      '!./{bower_components,node_modules}/**/*.jade'
+      '!./node_modules/**/*.jade'
     ], {base: './'})
     .pipe($.plumber(config.plumber))
     .pipe($.data(config.data))
@@ -182,7 +171,7 @@ gulp.task('watch-jade', () => {
       './**/*.jade',
       '!./**/_*.jade',
       '!./html_elements/lib/**/*.jade',
-      '!./{bower_components,node_modules}/**/*.jade'
+      '!./node_modules/**/*.jade'
     ], {base: './'})
     .pipe($.plumber(config.plumber))
     .pipe($.data(config.data))
@@ -192,13 +181,13 @@ gulp.task('watch-jade', () => {
   $.watch([
       './html_elements/lib/**/*.jade',
       './**/_*.jade',
-      '!./{bower_components,node_modules}/**/_*.jade'
+      '!./node_modules/**/_*.jade'
     ], () => {
       gulp.src([
           './**/*.jade',
           '!./**/_*.jade',
           '!./html_elements/lib/**/*.jade',
-          '!./{bower_components,node_modules}/**/*.jade'
+          '!./node_modules/**/*.jade'
         ], {base: './'})
         .pipe($.plumber(config.plumber))
         .pipe($.data(config.data))
@@ -211,7 +200,7 @@ gulp.task('watch-jade', () => {
 gulp.task('coffee', () => {
   return gulp.src([
       './**/*.coffee',
-      '!./{bower_components,node_modules}/**/*.coffee'
+      '!./node_modules/**/*.coffee'
     ], {base: './'})
     .pipe($.plumber(config.plumber))
     .pipe($.coffee(config.coffee))
@@ -223,7 +212,7 @@ gulp.task('coffee', () => {
 gulp.task('watch-coffee', () => {
   $.watch([
       './**/*.coffee',
-      '!./{bower_components,node_modules}/**/*.coffee'
+      '!./node_modules/**/*.coffee'
     ], {base: './'})
     .pipe($.plumber(config.plumber))
     .pipe($.coffee(config.coffee))
@@ -257,8 +246,4 @@ gulp.task('watch', ['watch-stylus', 'watch-jade', 'watch-coffee'], () => {
 
 gulp.task('serve', ['build'], () => {
   gulp.start('watch');
-});
-
-gulp.task('default', ['bower'], () => {
-  gulp.start('serve');
 });

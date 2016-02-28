@@ -5,7 +5,6 @@ html_elements/lib
 .editorconfig
 .gitignore
 .travis.yml
-bower.json
 deploy_git.ignore
 deploy_key.enc
 deploy.key
