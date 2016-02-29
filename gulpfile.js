@@ -95,7 +95,7 @@ const config = {
 };
 
 gulp.task('stylus', () => {
-  return gulp.src('./html_elements/lib/main.styl')
+  return gulp.src('./html_elements/lib/styles/index.styl')
     .pipe($.plumber(config.plumber))
     .pipe($.stylus(config.stylus))
     .pipe($.cssmin(config.cssmin))
