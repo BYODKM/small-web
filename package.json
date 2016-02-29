@@ -54,13 +54,13 @@
     "jstransformer-stylus": "~1.0.0",
     "kouto-swiss": "~0.11.14",
     "merge-stream": "~1.0.0",
-    "morph.css": "~1.2.2",
     "run-sequence": "~1.1.5",
     "vinyl-buffer": "~1.0.0",
     "vinyl-source-stream": "~1.1.0",
     "watchify": "~3.7.0"
   },
   "dependencies": {
+    "morph.css": "~1.2.2",
     "normalize.css": "~3.0.3",
     "vue": "~1.0.15"
   }
