@@ -46,7 +46,7 @@ const config = {
   jade: {
     basedir: __dirname,
     jade: jade,
-    pretty: true
+    pretty: false
   },
   data: (file) => {
     return {

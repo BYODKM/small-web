@@ -4,7 +4,7 @@
   "private": true,
   "description": "Small Code for the Larger Site",
   "scripts": {
-    "start": "gulp sprite && gulp serve",
+    "start": "gulp sprite && gulp build && gulp watch",
     "travis": "gulp sprite && gulp build",
     "sprite": "gulp sprite && gulp stylus",
     "build": "gulp build",
