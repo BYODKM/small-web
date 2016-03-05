@@ -1,16 +1,13 @@
-.u-margin
+data-u-margin
 
-  for value in "0" "1em" "1rem"
+  for value in "0" "1em" "1rem" "1.5em" "1.5rem" "2em" "2rem"
 
-    :root &-{value}:not(:root)
-      margin unquote(value)
-
-    :root &-t-{value}:not(:root)
+    :root [&=\"{value}\"]:not(:root)
       margin-top unquote(value)
-
-    :root &-b-{value}:not(:root)
       margin-bottom unquote(value)
 
-    :root &-tb-{value}:not(:root)
+    :root [&-t=\"{value}\"]:not(:root)
       margin-top unquote(value)
+
+    :root [&-b=\"{value}\"]:not(:root)
       margin-bottom unquote(value)
