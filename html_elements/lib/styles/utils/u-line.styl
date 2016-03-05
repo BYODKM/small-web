@@ -1,18 +1,18 @@
 .u-line
 
-  :root &-narrow:not(:root)
+  &-narrow:not(:root):not(:root)
     line-height narrow
 
-  :root &-wide:not(:root)
+  &-wide:not(:root):not(:root)
     line-height wide
 
-  :root &-xwide:not(:root)
+  &-xwide:not(:root):not(:root)
     line-height x-wide
 
-  :root &-xxwide:not(:root)
+  &-xxwide:not(:root):not(:root)
     line-height xx-wide
 
   for value in "1" "2"
 
-    :root &-{value}:not(:root)
+    &-{value}:not(:root):not(:root)
       line-height unquote(value)

@@ -2,9 +2,9 @@
 
   for value in "1em" "10px"
 
-    :root &-{value}:not(:root)
+    &-{value}:not(:root):not(:root)
       padding unquote(value)
 
-    :root &-tb-{value}:not(:root)
+    &-tb-{value}:not(:root):not(:root)
       padding-top unquote(value)
       padding-bottom unquote(value)

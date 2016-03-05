@@ -1,23 +1,23 @@
 .u-width
 
-  :root &-full:not(:root)
+  &-full:not(:root):not(:root)
     width 100%
 
-  :root &-half:not(:root)
+  &-half:not(:root):not(:root)
     width 50%
 
-  :root &-third:not(:root)
+  &-third:not(:root):not(:root)
     width 33%
 
-  :root &-quarter:not(:root)
+  &-quarter:not(:root):not(:root)
     width 25%
 
   for num in 1..100
 
-    :root &-{num}0px:not(:root)
+    &-{num}0px:not(:root):not(:root)
       width num * 10px
 
   for value in "768px"
 
-    :root &-{value}:not(:root)
+    &-{value}:not(:root):not(:root)
       width unquote(value)

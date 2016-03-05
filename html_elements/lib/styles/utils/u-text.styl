@@ -2,5 +2,5 @@
 
   for value in left center right
 
-    :root &-{value}:not(:root)
+    &-{value}:not(:root):not(:root)
       text-align value

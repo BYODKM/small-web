@@ -2,12 +2,12 @@ data-u-margin
 
   for value in "0" "1em" "1rem" "1.5em" "1.5rem" "2em" "2rem"
 
-    :root [&=\"{value}\"]:not(:root)
+    [&=\"{value}\"]:not(:root):not(:root)
       margin-top unquote(value)
       margin-bottom unquote(value)
 
-    :root [&-t=\"{value}\"]:not(:root)
+    [&-t=\"{value}\"]:not(:root):not(:root)
       margin-top unquote(value)
 
-    :root [&-b=\"{value}\"]:not(:root)
+    [&-b=\"{value}\"]:not(:root):not(:root)
       margin-bottom unquote(value)
