@@ -4,7 +4,6 @@
 <img src="http://internets-inc.github.io/small-web/html_elements/single-icon-smallweb@2x.png" alt="" width="256" />
 </p>
 
-
 # small-web
 
 > Small Code for the Larger Site
