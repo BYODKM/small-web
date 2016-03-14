@@ -87,7 +87,7 @@ const config = {
     notify: false,
     reloadDelay: 0,
     reloadDebounce: 0,
-    startPath: '/html_elements/usage/'
+    startPath: '/usage/'
   },
   reload: {
     stream: true

@@ -1,6 +1,8 @@
-bower_components
+html_elements/blocks
+html_elements/scripts
+html_elements/sprites
+html_elements/styles
 node_modules
-html_elements/lib
 
 .editorconfig
 .gitignore
