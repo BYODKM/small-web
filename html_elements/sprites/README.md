@@ -40,4 +40,4 @@ $ mkdir foo@2x
 $ cp @2x.handlebars foo@2x.handlebars
 ```
 
-__TODO:__ Write the new folder names on `../prepend/sprites.styl`.
+__TODO:__ Write the new folder names on `../styles/sprites.styl`.

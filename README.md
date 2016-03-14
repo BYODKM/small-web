@@ -37,7 +37,7 @@ This is yet another static site generator.
 - Auto publish [pure dist](https://github.com/internets-inc/small-web/tree/gh-pages) to the GitHub Pages by [Travis-CI](https://travis-ci.org/internets-inc/small-web).
 - The yields is not required web-root.
 - Archive [Atomic Design](http://patternlab.io/about.html) with Jade mixins.
-- Ultra thin reset css ([almost nothing](https://github.com/internets-inc/small-web/blob/master/html_elements/styles/prepend/default.styl)).
+- Ultra thin reset css ([almost nothing](https://github.com/internets-inc/small-web/blob/master/html_elements/styles/default.styl)).
 - Advanced non-destructive reset.css methodology by [morph.css](https://github.com/internets-inc/morph.css).
 
 ## Target Browsers
