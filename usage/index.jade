@@ -1,0 +1,59 @@
+include /html_elements/lib
+
+-
+  var title = 'Usage'
+
+  var boxUsageIndex = {
+    groups: [
+      {
+        label: 'blocks',
+        items: [
+          'breadcrumbs'
+        ]
+      },{
+        label: 'elements',
+        items: [
+          'blockquote',
+          'button',
+          'code',
+          'default',
+          'form',
+          'morph-css'
+        ]
+      },{
+        label: 'mixins',
+        items: [
+          'checkbox',
+          'hx',
+          'icon',
+          'radio',
+          'rating',
+          'select',
+          'space',
+          'sprite',
+          'switch',
+          'weak'
+        ]
+      },{
+        label: 'scripts',
+        items: [
+          'placeholder-polyfill',
+          'smooth-scroll'
+        ]
+      },{
+        label: 'others',
+        items: [
+          'margin',
+          'row',
+          'utils'
+        ]
+      }
+    ]
+  }
+
++html
+  +head
+    +title
+  +body.body--lightgray
+    +page
+      +include("box-usage-index")

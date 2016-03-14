@@ -1,0 +1,26 @@
+include /html_elements/lib
+
+-
+  var title = '+hx | Usage'
+
++html
+  +head
+    +title
+  +body
+    +page
+      .page__gutter
+
+        +hx +hx
+        +hx +hx
+        +hx +hx
+        +hx +hx
+        +hx +hx
+        +hx +hx
+        +hx +hx
+        +hx +hx
+
+        ul
+          each cycle in [1, 2, 3]
+            li
+              +hx(x="2") +hx(x="2")
+              +hx +hx

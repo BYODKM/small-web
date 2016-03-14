@@ -60,7 +60,7 @@ const config = {
   browserify: {
     cache: {},
     packageCache: {},
-    entries: ['./html_elements/lib/scripts/index.js']
+    entries: ['./html_elements/scripts/index.js']
   },
   uglify: {
     compress: true,
@@ -95,7 +95,7 @@ const config = {
 };
 
 gulp.task('stylus', () => {
-  return gulp.src('./html_elements/lib/styles/index.styl')
+  return gulp.src('./html_elements/styles/index.styl')
     .pipe($.plumber(config.plumber))
     .pipe($.stylus(config.stylus))
     .pipe($.cssmin(config.cssmin))
@@ -104,7 +104,7 @@ gulp.task('stylus', () => {
 });
 
 gulp.task('watch-stylus', () => {
-  $.watch(['./html_elements/lib/**/*.styl'], () => {
+  $.watch(['./html_elements/**/*.styl'], () => {
     gulp.start('stylus');
   });
 });
@@ -114,7 +114,7 @@ gulp.task('clean-sprite', (done) => {
 });
 
 gulp.task('sprite', ['clean-sprite'], (done) => {
-  const src = './html_elements/lib/sprites/';
+  const src = './html_elements/sprites/';
   const now = new Date();
   const time = {
     yyyy: now.getFullYear(),
@@ -157,7 +157,7 @@ gulp.task('jade', () => {
   return gulp.src([
       './**/*.jade',
       '!./**/_*.jade',
-      '!./html_elements/lib/**/*.jade',
+      '!./html_elements/**/*.jade',
       '!./node_modules/**/*.jade'
     ], {base: './'})
     .pipe($.plumber(config.plumber))
@@ -170,7 +170,7 @@ gulp.task('watch-jade', () => {
   $.watch([
       './**/*.jade',
       '!./**/_*.jade',
-      '!./html_elements/lib/**/*.jade',
+      '!./html_elements/**/*.jade',
       '!./node_modules/**/*.jade'
     ], {base: './'})
     .pipe($.plumber(config.plumber))
@@ -179,14 +179,14 @@ gulp.task('watch-jade', () => {
     .pipe(gulp.dest('.'))
     .pipe(browserSync.reload(config.reload));
   $.watch([
-      './html_elements/lib/**/*.jade',
+      './html_elements/**/*.jade',
       './**/_*.jade',
       '!./node_modules/**/_*.jade'
     ], () => {
       gulp.src([
           './**/*.jade',
           '!./**/_*.jade',
-          '!./html_elements/lib/**/*.jade',
+          '!./html_elements/**/*.jade',
           '!./node_modules/**/*.jade'
         ], {base: './'})
         .pipe($.plumber(config.plumber))

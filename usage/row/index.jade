@@ -1,0 +1,69 @@
+include /html_elements/lib
+
+-
+  var title = '.row | Usage'
+
++html
+  +head
+    +title
+  +body
+    +page
+      .page__gutter
+
+        h1
+          | .row
+
+        .row
+          .row__col
+            code.code
+              | .row__col
+            +_
+            | Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          .row__col
+            code.code
+              | .row__col
+
+        h2
+          | 3 columns
+
+        .row
+          .row__col
+            code.code
+              | .row__col
+          .row__col
+            code.code
+              | .row__col
+          .row__col
+            code.code
+              | .row__col
+
+        h2
+          | Auto sizing
+          +_
+          +weak.u-font-medium
+            code.code
+              | .row.row--auto
+
+        .row.row--auto
+          .row__col
+            code.code
+              | .row__col
+            +_
+            | Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          .row__col
+            code.code
+              | .row__col
+
+        h2
+          | Vertical middle
+          br
+          +weak.u-font-medium
+            code.code
+              | .row.row--auto.u-vertical-middle
+
+        .row.row--auto.u-vertical-middle
+          .row__col
+            | Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          .row__col
+            button.button
+              | button

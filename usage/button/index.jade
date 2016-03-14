@@ -1,0 +1,41 @@
+include /html_elements/lib
+
+-
+  var title = '.button | Usage'
+
++html
+  +head
+    +title
+  +body
+    +page
+      .page__gutter
+
+        p
+          button
+            | button
+
+        p
+          button.button
+            | button.button
+
+        p
+          a.button(href="#")
+            | a.button
+
+        p
+          a.button.button--tint(href="#")
+            | a.button.button--tint
+
+        p
+          input.button(type="button" value="input.button")
+
+        p
+          input.button.button--tint(type="button" value="input.button.button--tint")
+
+        p
+          button.button.button--execute
+            | button.button.button--execute
+
+        p
+          button.button.button--danger
+            | button.button.button--danger

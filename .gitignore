@@ -1,6 +1,6 @@
 html_elements/bundle-*.png
 html_elements/bundle.*
-html_elements/lib/sprites/*.styl
+html_elements/sprites/*.styl
 node_modules
 
 deploy.key

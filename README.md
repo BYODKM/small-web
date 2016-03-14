@@ -30,14 +30,14 @@ This is yet another static site generator.
 - Compiling JS by [CoffeeScript](https://github.com/jashkenas/coffeescript) as optional.
 - Bundle JS files by [Browserify](https://github.com/substack/node-browserify).
 - [Vue.js](https://github.com/vuejs/vue) is included.
-- Built in [Image Sprites](https://github.com/internets-inc/small-web/blob/master/html_elements/lib/sprites/README.md) generator.
+- Built in [Image Sprites](https://github.com/internets-inc/small-web/blob/master/html_elements/sprites/README.md) generator.
 - Built in [Style Guide](http://internets-inc.github.io/small-web/html_elements/usage/) generator.
 - Built in local server and LiveReload.
 - Auto Vendor Prefixing by [kouto-swiss](https://github.com/leny/kouto-swiss).
 - Auto publish [pure dist](https://github.com/internets-inc/small-web/tree/gh-pages) to the GitHub Pages by [Travis-CI](https://travis-ci.org/internets-inc/small-web).
 - The yields is not required web-root.
 - Archive [Atomic Design](http://patternlab.io/about.html) with Jade mixins.
-- Ultra thin reset css ([almost nothing](https://github.com/internets-inc/small-web/blob/master/html_elements/lib/prepend/default.styl)).
+- Ultra thin reset css ([almost nothing](https://github.com/internets-inc/small-web/blob/master/html_elements/styles/prepend/default.styl)).
 - Advanced non-destructive reset.css methodology by [morph.css](https://github.com/internets-inc/morph.css).
 
 ## Target Browsers
@@ -70,7 +70,7 @@ $ npm run serve
 $ npm run sprite
 ```
 
-[README.md](./html_elements/lib/sprites/README.md)
+[README.md](./html_elements/sprites/README.md)
 
 ## License
 

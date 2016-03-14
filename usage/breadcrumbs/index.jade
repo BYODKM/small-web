@@ -1,0 +1,48 @@
+include /html_elements/lib
+
+-
+  var breadcrumbs = {
+    items: [
+      {
+        text: 'Home',
+        href: '/'
+      },{
+        text: 'Usage',
+        href: '../'
+      },{
+        text: 'breadcrumbs',
+        href: false
+      }
+    ]
+  }
+
++html
+  +head
+    +title
+  +body
+    +page
+      .page__gutter
+        
+        h1
+          | breadcrumbs
+
+        +include("breadcrumbs")
+
+        pre
+          code.code.code--dark(data-lang="jade")
+            | -
+            |   var breadcrumbs = {
+            |     items: [
+            |       {
+            |         text: 'Home',
+            |         href: '/'
+            |       },{
+            |         text: 'Usage',
+            |         href: '../'
+            |       },{
+            |         text: 'breadcrumbs',
+            |         href: false
+            |       }
+            |     ]
+            |   }
+            | +include("breadcrumbs")

@@ -1,0 +1,20 @@
+include /html_elements/lib
+
+-
+  var title = 'placeholder-polyfill | Usage'
+
++html
+  +head
+    +title
+  +body
+    +page
+      .page__gutter
+        
+        h1
+          | placeholder-polyfill
+
+        p
+          input.input(type="input" placeholder="foo" value="")
+
+        p
+          textarea.textarea(placeholder="bar" value="")
