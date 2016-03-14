@@ -26,7 +26,7 @@ include /html_elements/lib
         h1
           | breadcrumbs
 
-        +include("breadcrumbs")
+        include /html_elements/blocks/breadcrumbs
 
         pre
           code.code.code--dark(data-lang="jade")
@@ -45,4 +45,4 @@ include /html_elements/lib
             |       }
             |     ]
             |   }
-            | +include("breadcrumbs")
+            | include /html_elements/blocks/breadcrumbs
