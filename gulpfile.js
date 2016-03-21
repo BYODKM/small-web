@@ -87,7 +87,7 @@ const config = {
     notify: false,
     reloadDelay: 0,
     reloadDebounce: 0,
-    startPath: '/usage/'
+    startPath: '/html_elements/tests/'
   },
   reload: {
     stream: true
@@ -157,7 +157,8 @@ gulp.task('jade', () => {
   return gulp.src([
       './**/*.jade',
       '!./**/_*.jade',
-      '!./html_elements/**/*.jade',
+      '!./html_elements/lib.jade',
+      '!./html_elements/blocks/*.jade',
       '!./node_modules/**/*.jade'
     ], {base: './'})
     .pipe($.plumber(config.plumber))
@@ -170,7 +171,8 @@ gulp.task('watch-jade', () => {
   $.watch([
       './**/*.jade',
       '!./**/_*.jade',
-      '!./html_elements/**/*.jade',
+      '!./html_elements/lib.jade',
+      '!./html_elements/blocks/*.jade',
       '!./node_modules/**/*.jade'
     ], {base: './'})
     .pipe($.plumber(config.plumber))
@@ -179,14 +181,16 @@ gulp.task('watch-jade', () => {
     .pipe(gulp.dest('.'))
     .pipe(browserSync.reload(config.reload));
   $.watch([
-      './html_elements/**/*.jade',
+      './html_elements/lib.jade',
+      './html_elements/blocks/*.jade',
       './**/_*.jade',
       '!./node_modules/**/_*.jade'
     ], () => {
       gulp.src([
           './**/*.jade',
           '!./**/_*.jade',
-          '!./html_elements/**/*.jade',
+          '!./html_elements/lib.jade',
+          '!./html_elements/blocks/*.jade',
           '!./node_modules/**/*.jade'
         ], {base: './'})
         .pipe($.plumber(config.plumber))

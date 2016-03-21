@@ -18,4 +18,4 @@ README.md
 
 /index.jade
 /**/*.jade
-!/usage/**/*.jade
+!/html_elements/tests/**/*.jade

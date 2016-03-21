@@ -31,7 +31,7 @@ This is yet another static site generator.
 - Bundle JS files by [Browserify](https://github.com/substack/node-browserify).
 - [Vue.js](https://github.com/vuejs/vue) is included.
 - Built in [Image Sprites](https://github.com/internets-inc/small-web/blob/master/html_elements/sprites/README.md) generator.
-- Built in [Style Guide](http://internets-inc.github.io/small-web/usage/) generator.
+- Built in [Style Guide](http://internets-inc.github.io/small-web/html_elements/tests/) generator.
 - Built in local server and LiveReload.
 - Auto Vendor Prefixing by [kouto-swiss](https://github.com/leny/kouto-swiss).
 - Auto publish [pure dist](https://github.com/internets-inc/small-web/tree/gh-pages) to the GitHub Pages by [Travis-CI](https://travis-ci.org/internets-inc/small-web).
