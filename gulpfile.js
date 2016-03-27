@@ -48,6 +48,14 @@ const config = {
     jade: jade,
     pretty: false
   },
+  html: [
+    './**/*.jade',
+    '!./**/_*.jade',
+    '!./html_elements/lib.jade',
+    '!./html_elements/blocks/**/*.jade',
+    '!./html_elements/styles/**/*.jade',
+    '!./node_modules/**/*.jade'
+  ],
   data: (file) => {
     return {
       __root: file.path.replace(__dirname, '').replace(/[^\/]/g, '').substr(1).replace(/\//g, '..\/'),
@@ -154,13 +162,7 @@ gulp.task('sprite', ['clean-sprite'], (done) => {
 });
 
 gulp.task('jade', () => {
-  return gulp.src([
-      './**/*.jade',
-      '!./**/_*.jade',
-      '!./html_elements/lib.jade',
-      '!./html_elements/blocks/*.jade',
-      '!./node_modules/**/*.jade'
-    ], {base: './'})
+  return gulp.src(config.html, {base: './'})
     .pipe($.plumber(config.plumber))
     .pipe($.data(config.data))
     .pipe($.jade(config.jade))
@@ -168,31 +170,20 @@ gulp.task('jade', () => {
 });
 
 gulp.task('watch-jade', () => {
-  $.watch([
-      './**/*.jade',
-      '!./**/_*.jade',
-      '!./html_elements/lib.jade',
-      '!./html_elements/blocks/*.jade',
-      '!./node_modules/**/*.jade'
-    ], {base: './'})
+  $.watch(config.html, {base: './'})
     .pipe($.plumber(config.plumber))
     .pipe($.data(config.data))
     .pipe($.jade(config.jade))
     .pipe(gulp.dest('.'))
     .pipe(browserSync.reload(config.reload));
   $.watch([
-      './html_elements/lib.jade',
-      './html_elements/blocks/*.jade',
       './**/_*.jade',
-      '!./node_modules/**/_*.jade'
+      './html_elements/lib.jade',
+      './html_elements/blocks/**/*.jade',
+      './html_elements/styles/**/*.jade',
+      '!./node_modules/**/*.jade'
     ], () => {
-      gulp.src([
-          './**/*.jade',
-          '!./**/_*.jade',
-          '!./html_elements/lib.jade',
-          '!./html_elements/blocks/*.jade',
-          '!./node_modules/**/*.jade'
-        ], {base: './'})
+      gulp.src(config.html, {base: './'})
         .pipe($.plumber(config.plumber))
         .pipe($.data(config.data))
         .pipe($.jade(config.jade))
