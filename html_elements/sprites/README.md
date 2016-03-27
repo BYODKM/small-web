@@ -7,8 +7,8 @@
 ├── @1x
 │   └── foo@1x.png
 └── @2x
+    └── foo@2x.png
     └── bar@2x.png
-    └── baz@2x.png
 ```
 
 ## How to Generate
@@ -20,16 +20,16 @@ $ npm run sprite
 ## How to Use
 
 ```
-// Jade
-+sprite(src="baz@2x.png" alt="")
+// In Jade
++sprite(src="foo@2x.png" alt="")
 ```
 
 ```
-// Stylus
-sprite("baz@2x.png")
+// From Stylus
+sprite("foo@2x.png")
 ```
 
-No need to write width, height even filepath in both cases.
+No need to write width, height and even filepath in both cases.
 
 ## Add Folders
 
