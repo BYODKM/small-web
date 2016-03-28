@@ -1,10 +1,6 @@
 .box-tests-index
 
-  &:not(:root)
-    margin-bottom 60px
-    border-bottom 1px solid silver
-
-  & &__title
+  & &__header
     padding 0 1rem
     color white
     font-size xx-large
@@ -12,11 +8,14 @@
     line-height 2
     background-color darkgray
 
-  & &__github
-    float right
-    color white
+  & &__footer
+    margin-bottom 2rem
+    padding-top 1rem
+    border-top 1px solid silver
+    font-size xx-large
+    text-align center
 
-  & &__label
+  & &__category
     padding 0 1em
     color white
     font-size small
@@ -34,13 +33,10 @@
 
   & &__link
     display block
-    padding 1em
+    padding 1rem
 
     &:hover
       background-color whitesmoke
 
-  & &__code
-    position absolute
-    top 0
-    right 0
-    padding 1em
+  & &__jade
+    absolute 1rem 1rem null null
