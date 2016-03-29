@@ -20,29 +20,10 @@ include /html_elements/lib
   +head
     +title
   +body
-    +page
+    +page(curl="index.jade")
       .page__gutter
-        
+
         h1
           | breadcrumbs
 
         include /html_elements/blocks/breadcrumbs
-
-        pre
-          code.code.code--dark(data-lang="jade")
-            | -
-            |   var breadcrumbs = {
-            |     items: [
-            |       {
-            |         text: 'Home',
-            |         href: '/'
-            |       },{
-            |         text: 'Tests',
-            |         href: '../'
-            |       },{
-            |         text: 'breadcrumbs',
-            |         href: false
-            |       }
-            |     ]
-            |   }
-            | include /html_elements/blocks/breadcrumbs

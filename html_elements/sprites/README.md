@@ -36,8 +36,8 @@ No need to write width, height and even filepath in both cases.
 In case of you reach the iOS file size limits, you need to add new folders.
 
 ```
-$ mkdir foo@2x
-$ cp @2x.handlebars foo@2x.handlebars
+$ mkdir new@2x
+$ cp @2x.handlebars new@2x.handlebars
 ```
 
 __TODO:__ Write the new folder names on `../styles/sprites.styl`.

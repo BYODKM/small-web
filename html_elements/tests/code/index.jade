@@ -7,7 +7,7 @@ include /html_elements/lib
   +head
     +title
   +body
-    +page
+    +page(curl="index.jade")
       .page__gutter
 
         p
@@ -23,15 +23,15 @@ include /html_elements/lib
             | pre code.code
 
         pre
-          code.code(data-lang="jade")
-            | pre code.code(data-lang="jade")
+          code.code(data-lang="Jade")
+            | pre code.code(data-lang="Jade")
 
         pre
-          code.code.code--dark(data-lang="jade")
-            | pre code.code.code--dark(data-lang="jade")
+          code.code.code--dark(data-lang="Jade")
+            | pre code.code.code--dark(data-lang="Jade")
 
         pre
-          code.code(data-lang="coffee-script")
+          code.code(data-lang="CoffeeScript")
             | if items.length
             |   for item in items
             |     item.classList.add('is-current') if isCurrent(item)
