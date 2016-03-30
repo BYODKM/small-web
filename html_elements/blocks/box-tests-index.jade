@@ -8,8 +8,7 @@ if boxTestsIndex
         dt.div(class="#{$}__category")=group.label
         each item in group.items
           dd.div(class="#{$}__item")
-            p.div(class="#{$}__demo")
-              a.a(href="./#{item}/" class="#{$}__link")=item
+            a.a(href="./#{item}/" class="#{$}__link")=item
     footer(class="#{$}__footer")
       a.a(href="https://github.com/internets-inc/small-web" target="_blank")
         +icon(name="ion-social-github")
