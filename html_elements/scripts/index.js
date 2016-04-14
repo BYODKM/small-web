@@ -1,5 +1,5 @@
 require('./_global');
-require('./_no-features');
+require('./no-features');
 require('./placeholder-polyfill');
 require('./smooth-scroll');
 require('./touch-start');

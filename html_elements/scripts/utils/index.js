@@ -1,9 +1,24 @@
-var foo;
+var hasPlaceholder, hasPointerEvents, hasTouch;
 
-foo = function() {
-  return console.log('HO! HO! HO!');
+hasPlaceholder = function() {
+  var input;
+  input = document.createElement('input');
+  return 'placeholder' in input;
+};
+
+hasPointerEvents = function() {
+  var style;
+  style = document.createElement('a').style;
+  style.cssText = 'pointer-events: auto';
+  return style.pointerEvents === 'auto';
+};
+
+hasTouch = function() {
+  return 'ontouchstart' in window;
 };
 
 module.exports = {
-  foo: foo
+  hasPlaceholder: hasPlaceholder,
+  hasPointerEvents: hasPointerEvents,
+  hasTouch: hasTouch
 };

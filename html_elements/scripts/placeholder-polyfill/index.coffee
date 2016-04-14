@@ -1,11 +1,9 @@
 do ->
   'use strict'
 
-  hasOwnAbility = do ->
-    input = document.createElement('input')
-    return 'placeholder' of input
+  utils = require('../utils')
 
-  if hasOwnAbility then return
+  if utils.hasPlaceholder() then return
 
   focused = ->
     this.classList.remove('is-polyfilled')

@@ -1,12 +1,8 @@
 (function() {
   'use strict';
-  var DOMContentLoaded, blurred, focused, hasOwnAbility;
-  hasOwnAbility = (function() {
-    var input;
-    input = document.createElement('input');
-    return 'placeholder' in input;
-  })();
-  if (hasOwnAbility) {
+  var DOMContentLoaded, blurred, focused, utils;
+  utils = require('../utils');
+  if (utils.hasPlaceholder()) {
     return;
   }
   focused = function() {
