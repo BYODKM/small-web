@@ -53,7 +53,7 @@ const config = {
     '!./**/_*.jade',
     '!./html_elements/lib.jade',
     '!./html_elements/blocks/**/*.jade',
-    '!./html_elements/styles/**/*.jade',
+    '!./html_elements/elements/**/*.jade',
     '!./node_modules/**/*.jade'
   ],
   data: (file) => {
@@ -180,7 +180,7 @@ gulp.task('watch-jade', () => {
       './**/_*.jade',
       './html_elements/lib.jade',
       './html_elements/blocks/**/*.jade',
-      './html_elements/styles/**/*.jade',
+      './html_elements/elements/**/*.jade',
       '!./node_modules/**/*.jade'
     ], () => {
       gulp.src(config.html, {base: './'})
