@@ -102,21 +102,6 @@ const config = {
   }
 };
 
-gulp.task('stylus', () => {
-  return gulp.src('./html_elements/styles/index.styl')
-    .pipe($.plumber(config.plumber))
-    .pipe($.stylus(config.stylus))
-    .pipe($.cssmin(config.cssmin))
-    .pipe($.rename('bundle.css'))
-    .pipe(gulp.dest('./html_elements/'));
-});
-
-gulp.task('watch-stylus', () => {
-  $.watch(['./html_elements/**/*.styl'], () => {
-    gulp.start('stylus');
-  });
-});
-
 gulp.task('clean-sprite', (done) => {
   return del(['./html_elements/bundle-*.png'], done);
 });
@@ -159,6 +144,21 @@ gulp.task('sprite', ['clean-sprite'], (done) => {
     generateSprite(folders[i]);
   }
   done();
+});
+
+gulp.task('stylus', () => {
+  return gulp.src('./html_elements/styles/index.styl')
+    .pipe($.plumber(config.plumber))
+    .pipe($.stylus(config.stylus))
+    .pipe($.cssmin(config.cssmin))
+    .pipe($.rename('bundle.css'))
+    .pipe(gulp.dest('./html_elements/'));
+});
+
+gulp.task('watch-stylus', () => {
+  $.watch(['./html_elements/**/*.styl'], () => {
+    gulp.start('stylus');
+  });
 });
 
 gulp.task('jade', () => {

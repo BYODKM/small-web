@@ -1,0 +1,86 @@
+{ "rules": {
+  "at-rule-name-case": [
+    "lower", {
+    "severity": "warning"
+  }],
+  "comment-whitespace-inside": [
+    "always", {
+    "severity": "warning"
+  }],
+  "custom-property-no-outside-root": [
+    true, {
+    "severity": "warning"
+  }],
+  "declaration-block-no-shorthand-property-overrides": [
+    true, {
+    "severity": "warning"
+  }],
+  "font-family-name-quotes": [
+    "double-where-recommended", {
+    "severity": "warning"
+  }],
+  "function-calc-no-unspaced-operator": [
+    true, {
+    "severity": "warning"
+  }],
+  "function-name-case": [
+    "lower", {
+    "severity": "warning"
+  }],
+  "no-unknown-animations": [
+    true, {
+    "severity": "warning"
+  }],
+  "number-zero-length-no-unit": [
+    true, {
+    "severity": "warning"
+  }],
+  "property-case": [
+    "lower", {
+    "severity": "warning"
+  }],
+  "selector-no-id": [
+    true, {
+    "severity": "warning"
+  }],
+  "selector-no-universal": [
+    true, {
+    "severity": "warning"
+  }],
+  "selector-pseudo-class-case": [
+    "lower", {
+    "severity": "warning"
+  }],
+  "selector-pseudo-element-case": [
+    "lower", {
+    "severity": "warning"
+  }],
+  "selector-pseudo-element-colon-notation": [
+    "single", {
+    "severity": "warning"
+  }],
+  "selector-type-case": [
+    "lower", {
+    "severity": "warning"
+  }],
+  "shorthand-property-no-redundant-values": [
+    true, {
+    "severity": "warning"
+  }],
+  "string-no-newline": [
+    true, {
+    "severity": "warning"
+  }],
+  "string-quotes": [
+    "double", {
+    "severity": "warning"
+  }],
+  "unit-case": [
+    "lower", {
+    "severity": "warning"
+  }],
+  "unit-no-unknown": [
+    true, {
+    "severity": "warning"
+  }]
+}}
