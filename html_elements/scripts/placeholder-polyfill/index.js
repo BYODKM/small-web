@@ -1,8 +1,8 @@
 (function() {
   'use strict';
-  var DOMContentLoaded, blurred, focused, utils;
-  utils = require('../utils');
-  if (utils.hasPlaceholder()) {
+  var DOMContentLoaded, blurred, focused, u;
+  u = require('../utils');
+  if (u.hasPlaceholder()) {
     return;
   }
   focused = function() {
@@ -28,10 +28,10 @@
       if (item.value === '') {
         item.value = item.getAttribute('placeholder');
         item.classList.add('is-polyfilled');
-        item.addEventListener('focus', focused, false);
-        item.addEventListener('blur', blurred, false);
+        item.addEventListener('focus', focused);
+        item.addEventListener('blur', blurred);
       }
     }
   };
-  document.addEventListener('DOMContentLoaded', DOMContentLoaded, false);
+  document.addEventListener('DOMContentLoaded', DOMContentLoaded);
 })();

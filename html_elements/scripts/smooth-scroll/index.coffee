@@ -27,7 +27,7 @@ do ->
       touchstart = (ev)->
         ev.preventDefault()
         return
-      body.addEventListener('touchstart', touchstart, false)
+      body.addEventListener('touchstart', touchstart)
 
       targetScrollTop = (elm)->
         px = 0
@@ -51,7 +51,7 @@ do ->
           setTimeout(scroll, config.refreshRate)
         else
           window.scrollTo(0, parseInt(goal))
-          body.removeEventListener('touchstart', touchstart, false)
+          body.removeEventListener('touchstart', touchstart)
         return
 
       scroll()
@@ -62,9 +62,9 @@ do ->
       if !link.getAttribute('href').match(/^#/) then continue
       str = link.hash.replace(/(^#|\?.*)/g, '')
       if str.length
-        link.addEventListener('click', clicked, false)
+        link.addEventListener('click', clicked)
 
     return
 
-  document.addEventListener('DOMContentLoaded', DOMContentLoaded, false)
+  document.addEventListener('DOMContentLoaded', DOMContentLoaded)
   return

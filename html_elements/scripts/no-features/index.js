@@ -1,20 +1,20 @@
 (function() {
   'use strict';
-  var html, utils;
-  utils = require('../utils');
+  var html, u;
+  u = require('../utils');
   html = document.documentElement;
   if (!html) {
     return;
   }
-  if (utils.hasTouch()) {
+  if (u.hasTouch()) {
     html.classList.add('no-hover');
   } else {
     html.classList.add('no-touch');
   }
-  if (!utils.hasPlaceholder()) {
+  if (!u.hasPlaceholder()) {
     html.classList.add('no-placeholder');
   }
-  if (!utils.hasPointerEvents()) {
+  if (!u.hasPointerEvents()) {
     html.classList.add('no-pointer-events');
   }
 })();

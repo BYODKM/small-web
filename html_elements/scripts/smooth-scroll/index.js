@@ -29,7 +29,7 @@
       touchstart = function(ev) {
         ev.preventDefault();
       };
-      body.addEventListener('touchstart', touchstart, false);
+      body.addEventListener('touchstart', touchstart);
       targetScrollTop = function(elm) {
         var px;
         px = 0;
@@ -59,7 +59,7 @@
           setTimeout(scroll, config.refreshRate);
         } else {
           window.scrollTo(0, parseInt(goal));
-          body.removeEventListener('touchstart', touchstart, false);
+          body.removeEventListener('touchstart', touchstart);
         }
       };
       scroll();
@@ -74,9 +74,9 @@
       }
       str = link.hash.replace(/(^#|\?.*)/g, '');
       if (str.length) {
-        link.addEventListener('click', clicked, false);
+        link.addEventListener('click', clicked);
       }
     }
   };
-  document.addEventListener('DOMContentLoaded', DOMContentLoaded, false);
+  document.addEventListener('DOMContentLoaded', DOMContentLoaded);
 })();

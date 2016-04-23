@@ -1,9 +1,9 @@
 do ->
   'use strict'
 
-  utils = require('../utils')
+  u = require('../utils')
 
-  if utils.hasPlaceholder() then return
+  if u.hasPlaceholder() then return
 
   focused = ->
     this.classList.remove('is-polyfilled')
@@ -26,9 +26,9 @@ do ->
       if item.value is ''
         item.value = item.getAttribute('placeholder')
         item.classList.add('is-polyfilled')
-        item.addEventListener('focus', focused, false)
-        item.addEventListener('blur', blurred, false)
+        item.addEventListener('focus', focused)
+        item.addEventListener('blur', blurred)
 
     return
-  document.addEventListener('DOMContentLoaded', DOMContentLoaded, false)
+  document.addEventListener('DOMContentLoaded', DOMContentLoaded)
   return

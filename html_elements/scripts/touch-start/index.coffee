@@ -6,8 +6,8 @@ do ->
     return
 
   DOMContentLoaded = ->
-    document.body.addEventListener('touchstart', doNothing, false)
+    document.body.addEventListener('touchstart', doNothing)
     return
 
-  document.addEventListener('DOMContentLoaded', DOMContentLoaded, false)
+  document.addEventListener('DOMContentLoaded', DOMContentLoaded)
   return
