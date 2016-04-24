@@ -8,13 +8,14 @@
     border 1px solid silver
     border-radius 4px
     font-family monospace
-    font-size small
+    font-size 0.8em
     background-color whitesmoke
 
   pre &:not(:root)
     position static
     display block
     padding 1.25em
+    border-radius 0
     overflow-x scroll
     word-wrap normal
     line-height x-wide
@@ -22,7 +23,7 @@
     &:before
       content attr(data-lang)
       absolute 0 0 null null
-      border-radius 0 4px
+      border-radius 0 0 0 4px
       padding 0 1em
       color white
       font-size x-small
