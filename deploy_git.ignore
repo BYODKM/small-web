@@ -21,4 +21,4 @@ README.md
 /index.jade
 /html_elements/tests/index.jade
 /**/*.jade
-!/html_elements/tests/**/*.jade
+!/html_elements/tests/*/*.jade
