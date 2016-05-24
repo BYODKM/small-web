@@ -3,7 +3,7 @@
 [![Build Status](https://travis-ci.org/internets-inc/small-web.svg?branch=master)](https://travis-ci.org/internets-inc/small-web)
 
 <p align="center">
-<img src="http://internets-inc.github.io/small-web/html_elements/single-icon-smallweb@2x.png" alt="" width="256" />
+<img src="http://internets-inc.github.io/small-web/html_elements/solo-icon-smallweb@2x.png" alt="" width="256" />
 </p>
 
 > Small Code for the Larger Site

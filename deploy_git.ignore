@@ -1,4 +1,5 @@
 html_elements/blocks
+html_elements/elements
 html_elements/scripts
 html_elements/sprites
 html_elements/styles
@@ -6,6 +7,7 @@ node_modules
 
 .editorconfig
 .gitignore
+.stylelintrc
 .travis.yml
 deploy_git.ignore
 deploy_key.enc
@@ -17,5 +19,6 @@ package.json
 README.md
 
 /index.jade
+/html_elements/tests/index.jade
 /**/*.jade
 !/html_elements/tests/**/*.jade
