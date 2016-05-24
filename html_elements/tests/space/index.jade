@@ -1,0 +1,27 @@
+include /html_elements/lib
+
+-
+  var title = '+space | Tests'
+
++html
+  +head
+    +title
+  +body
+    +page(curl="index.jade")
+      .page__gutter
+
+        p
+          | Jade needs a
+          +space
+          code.code
+            | +space
+          +space
+          | mixin,
+          +space
+
+          | and
+          +_
+          code.code
+            | +_
+          +_
+          | for short.

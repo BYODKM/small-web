@@ -1,0 +1,40 @@
+include /html_elements/lib
+
+-
+  var title = '+switch | Tests'
+
++html
+  +head
+    +title
+  +body
+    +page(curl="index.jade")
+      .page__gutter
+
+        p
+          code.code
+            | +switch
+
+        p
+          +switch
+
+        p
+          code.code
+            | +switch(checked="true")
+
+        p
+          +switch(checked="true")
+
+        hr.hr
+
+        p.div
+          label.label.label--block
+            span.row.row--auto
+              span.row__col.u-padding-tb-10px.u-vertical-middle
+                | With
+                +_
+                code.code
+                  | label
+              span.row__col.u-padding-tb-10px.u-text-right
+                +switch
+
+        hr.hr

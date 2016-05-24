@@ -1,0 +1,37 @@
+include /html_elements/lib
+
+-
+  var title = '+code | Tests'
+
++html
+  +head
+    +title
+  +body
+    +page(curl="index.jade")
+      .page__gutter
+
+        p
+          code
+            | code
+
+        p
+          code.code
+            | code.code
+
+        pre
+          code.code
+            | pre code.code
+
+        pre
+          code.code(data-lang="Jade")
+            | pre code.code(data-lang="Jade")
+
+        pre
+          code.code.code--dark(data-lang="Jade")
+            | pre code.code.code--dark(data-lang="Jade")
+
+        pre
+          code.code(data-lang="CoffeeScript")
+            | if items.length
+            |   for item in items
+            |     item.classList.add('is-current') if isCurrent(item)

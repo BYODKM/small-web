@@ -1,0 +1,41 @@
+include /html_elements/lib
+
+-
+  var title = 'data-u-margin | Tests'
+
++html
+  +head
+    +title
+  +body
+    +page(curl="index.jade")
+      .page__gutter
+
+        h1
+          | data-u-margin
+
+        hr
+
+        p(data-u-margin="1rem")
+          code.code
+            | p(data-u-margin="1rem")
+
+        hr
+
+        p(data-u-margin="1.5rem")
+          code.code
+            | p(data-u-margin="1.5rem")
+
+        hr
+
+        p(data-u-margin="2rem")
+          code.code
+            | p(data-u-margin="2rem")
+
+        hr
+
+        p
+          a.button.button--tint(
+            href="https://github.com/internets-inc/small-web/blob/master/html_elements/styles/utils/u-margin.styl"
+            target="_blank"
+          )
+            | Learn more

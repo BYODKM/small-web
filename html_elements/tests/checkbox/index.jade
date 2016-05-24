@@ -1,0 +1,52 @@
+include /html_elements/lib
+
+-
+  var title = '+checkbox | Tests'
+
++html
+  +head
+    +title
+  +body
+    +page(curl="index.jade")
+      .page__gutter
+
+        h1
+          | checkbox
+
+        p
+          label
+            input(type="checkbox")
+
+            +_
+            | A:
+            +_
+            code.code
+              | input(type="checkbox")
+
+        p
+          label
+            +checkbox
+
+            +_
+            | B:
+            +_
+            code.code
+              | +checkbox
+
+        p
+          label
+            +checkbox(checked="true")
+
+            +_
+            | C:
+            +_
+            code.code
+              | +checkbox(checked="true")
+
+        p
+          +checkbox
+
+          +_
+          | D: Without 
+          code.code
+            | label

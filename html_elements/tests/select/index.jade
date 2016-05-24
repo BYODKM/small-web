@@ -1,0 +1,29 @@
+include /html_elements/lib
+
+-
+  var title = '+select | Tests'
+
++html
+  +head
+    +title
+  +body
+    +page(curl="index.jade")
+      .page__gutter
+
+        h1
+          | select
+
+        p
+          select
+            option select
+            option The quick brown fox jumps over a lazy dog
+
+        p
+          select.select
+            option .select
+            option The quick brown fox jumps over a lazy dog
+
+        p
+          +select
+            option +select
+            option The quick brown fox jumps over a lazy dog

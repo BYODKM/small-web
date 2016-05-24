@@ -1,0 +1,28 @@
+include /html_elements/lib
+
+-
+  var title = 'smooth-scroll | Tests'
+
++html
+  +head
+    +title
+  +body
+    +page(curl="index.jade")
+      .page__gutter
+
+        ol
+          - var i = 0
+
+          while i < 100
+            - i++
+
+            if i === 1
+              li#top
+                a(href="#bottom") To bottom
+
+            else if i === 100
+              li#bottom
+                a(href="#top") To top
+
+            else
+              li

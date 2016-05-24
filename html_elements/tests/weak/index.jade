@@ -1,0 +1,23 @@
+include /html_elements/lib
+
+-
+  var title = '+weak | Tests'
+
++html
+  +head
+    +title
+  +body
+    +page(curl="index.jade")
+      .page__gutter
+
+        h1
+          | h1
+          +_
+          +weak
+            | +weak
+
+        p
+          | p
+          +_
+          strong
+            | strong

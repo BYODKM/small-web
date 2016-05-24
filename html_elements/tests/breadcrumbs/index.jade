@@ -1,0 +1,29 @@
+include /html_elements/lib
+
+-
+  var breadcrumbs = {
+    items: [
+      {
+        text: 'Home',
+        href: '/'
+      },{
+        text: 'Tests',
+        href: '../'
+      },{
+        text: 'breadcrumbs',
+        href: false
+      }
+    ]
+  }
+
++html
+  +head
+    +title
+  +body
+    +page(curl="index.jade")
+      .page__gutter
+
+        h1
+          | breadcrumbs
+
+        include /html_elements/blocks/breadcrumbs

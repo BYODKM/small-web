@@ -1,0 +1,62 @@
+include /html_elements/lib
+
+-
+  var title = 'font-size | Tests'
+
++html
+  +head
+    +title
+  +body
+    +page(curl="index.jade")
+      .page__gutter
+        h1 font-size
+        ul
+          li
+            p
+              span.u-font-xxlarge
+                | font-size
+              +_
+              code.code
+                | xx-large
+          li
+            p
+              span.u-font-xlarge
+                | font-size
+              +_
+              code.code
+                | x-large
+          li
+            p
+              span.u-font-large
+                | font-size
+              +_
+              code.code
+                | large
+          li
+            p
+              span.u-font-medium
+                | font-size
+              +_
+              code.code
+                | medium
+          li
+            p
+              span.u-font-small
+                | font-size
+              +_
+              code.code
+                | small
+          li
+            p
+              span.u-font-xsmall
+                | font-size
+              +_
+              code.code
+                | x-small
+          li
+            p
+              span.u-font-xxsmall
+                | font-size
+              +_
+              code.code
+                | xx-small

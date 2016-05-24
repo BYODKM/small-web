@@ -1,0 +1,46 @@
+include /html_elements/lib
+
+-
+  var title = '+icon | Tests'
+
++html
+  +head
+    +title
+  +body
+    +page(curl="index.jade")
+      .page__gutter
+
+        h1
+          | icon
+
+        p
+          +icon(name="ion-android-download").u-font-xlarge
+
+          br
+          code.code
+            | +icon(name="ion-android-download")
+
+        p
+          +icon(name="ion-android-volume-up").u-font-xlarge
+
+          br
+          code.code
+            | +icon(name="ion-android-volume-up")
+
+        p
+          +icon(name="ion-share").u-font-xlarge
+
+          br
+          code.code
+            | +icon(name="ion-share")
+
+        p
+          +icon(name="ion-social-github").u-font-xlarge
+
+          br
+          code.code
+            | +icon(name="ion-social-github")
+
+        p(data-u-margin-t="1.5rem")
+          a.button.button--tint(href="http://ionicons.com" target="_blank")
+            | Learn more

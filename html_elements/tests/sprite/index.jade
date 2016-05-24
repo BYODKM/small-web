@@ -1,0 +1,30 @@
+include /html_elements/lib
+
+-
+  var title = '+sprite | Tests'
+
++html
+  +head
+    +title
+  +body
+    +page(curl="index.jade")
+      .page__gutter
+
+        h1
+          | sprite
+
+        p
+          +sprite(src="dummy-44@1x.png" alt="dummy@1x")
+          +_
+          code.code
+            | +sprite(src="dummy-44@1x.png" alt="dummy@1x")
+
+        p
+          +sprite(src="dummy-88@2x.png" alt="dummy@2x")
+          +_
+          code.code
+            | +sprite(src="dummy-88@2x.png" alt="dummy@2x")
+
+        p(data-u-margin-t="1.5rem")
+          a.button.button--tint(href="https://github.com/internets-inc/small-web/blob/master/html_elements/sprites/README.md" target="_blank")
+            | README.md

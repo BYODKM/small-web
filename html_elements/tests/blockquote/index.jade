@@ -1,0 +1,32 @@
+include /html_elements/lib
+
+-
+  var title = '.blockquote | Tests'
+
++html
+  +head
+    +title
+  +body
+    +page(curl="index.jade")
+      .page__gutter
+
+        h1 .blockquote
+
+        blockquote.blockquote.blockquote--email
+          p
+            code.code
+              | blockquote.blockquote.blockquote--email
+
+          blockquote.blockquote.blockquote--email
+            p
+              | blockquote
+
+            blockquote.blockquote.blockquote--email
+              p
+                | blockquote
+
+              blockquote.blockquote.blockquote--email
+                p
+                  | blockquote
+                p
+                  | blockquote

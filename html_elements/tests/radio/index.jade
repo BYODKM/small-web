@@ -1,0 +1,52 @@
+include /html_elements/lib
+
+-
+  var title = '+radio | Tests'
+
++html
+  +head
+    +title
+  +body
+    +page(curl="index.jade")
+      .page__gutter
+
+        h1
+          | radio
+
+        p
+          label
+            input(type="radio" name="radio")
+
+            +_
+            | A:
+            +_
+            code.code
+              | input(type="radio")
+
+        p
+          label
+            +radio(name="radio")
+
+            +_
+            | B:
+            +_
+            code.code
+              | +radio
+
+        p
+          label
+            +radio(name="radio" checked="true")
+
+            +_
+            | C:
+            +_
+            code.code
+              | +radio(checked="true")
+
+        p
+          +radio(name="radio")
+
+          +_
+          | D: Without 
+          code.code
+            | label

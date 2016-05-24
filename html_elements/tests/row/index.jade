@@ -1,0 +1,70 @@
+include /html_elements/lib
+
+-
+  var title = '.row | Tests'
+
++html
+  +head
+    +title
+  +body
+    +page(curl="index.jade")
+      .page__gutter
+
+        h1
+          | .row
+
+        h2
+          | 2 columns
+
+        .row
+          .row__col
+            code.code
+              | .row__col
+          .row__col
+            code.code
+              | .row__col
+
+        h2
+          | 3 columns
+
+        .row
+          .row__col
+            code.code
+              | .row__col
+          .row__col
+            code.code
+              | .row__col
+          .row__col
+            code.code
+              | .row__col
+
+        h2
+          | Auto sizing
+          br
+          +weak.u-font-medium
+            code.code
+              | .row.row--auto
+
+        .row.row--auto
+          .row__col
+            code.code
+              | .row__col
+            +_
+            +lorem
+          .row__col
+            code.code
+              | .row__col
+
+        h2
+          | Vertical middle
+          br
+          +weak.u-font-medium
+            code.code
+              | .row.row--auto.u-vertical-middle
+
+        .row.row--auto.u-vertical-middle
+          .row__col
+            +lorem
+          .row__col
+            button.button
+              | button

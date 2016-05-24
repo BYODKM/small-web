@@ -1,0 +1,63 @@
+include /html_elements/lib
+
+-
+  var title = 'morph.css | Tests'
+
++html
+  +head
+    +title
+  +body
+    +page(curl="index.jade")
+      .page__gutter
+        
+        h1 morph.css
+
+        h2
+          | ul
+
+        ul
+          li
+            code.code
+              | li
+          li
+            code.code
+              | li
+
+        ul.div
+          li.span
+            code.code
+              | li.span
+          li.span
+            code.code
+              | li.span
+
+        h2
+          | dl
+
+        dl
+          dt
+            code.code
+              | dt
+          dd
+            code.code
+              | dd
+
+        dl
+          dt.div
+            code.code
+              | dt.div
+          dd.div
+            code.code
+              | dd.div
+
+        dl
+          dt.span
+            code.code
+              | dt.span
+          dd.span
+            code.code
+              | dd.span
+
+        p(data-u-margin-t="1.5rem")
+          a.button.button--tint(href="https://github.com/internets-inc/morph.css" target="_blank")
+            | Learn more
